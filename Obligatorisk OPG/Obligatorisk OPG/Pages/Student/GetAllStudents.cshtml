@@ -3,72 +3,75 @@
 @{
     ViewData["Title"] = "GetStudents";
 }
+<h1>Students</h1>
 
-<p>
+@*<p>
     <a asp-page="/Students/Create">Create New Student</a>
 </p>
-<p>
-    <a asp-page="/Students/Student">Display students and their numbers</a>
-</p>
-<form>
-    <p>
-        Search By Name: <input type="text" asp-for="NameCriteria" />
-        <input type="submit" value="Filter" />
-        <a asp-page="/Students/GetStudents">Back to Full List </a>
-    </p>
-</form>
-<form>
-    <p>
-        Search By Id: <input type="text" asp-for="AdressCriteria" />
-        <input type="submit" value="Filter" />
-        <a asp-page="/Students/GetStudents">Back to Full List </a>
-    </p>
-</form>
 
+<form>
+    <p>
+        Search By Adress: <input type="text" asp-for="AdressCriteria" />
+        <input type="submit" value="Filter" />
+        <a asp-page="/Students/GetStudents">Back to Full List </a>
+    </p>
+</form>
+<form>
+    <p>
+        Search By Id: <input type="text" asp-for="IdCriteria" />
+        <input type="submit" value="Filter" />
+        <a asp-page="/Students/GetStudents">Back to Full List </a>
+    </p>
+</form>*@
 
 <h4 style="color:red"> List of students</h4>
 <table class="table">
     <thead>
-        <tr>
-            <th> StudentNo </th>
-            <th> Name  </th>
-            <th> Adress  </th>
+        <tr>class="btn-secondary active">
+            <th> 
+                StudentNo 
+           </th>
+            <th>
+                Name
+           </th>
+            <th> 
+                Adress
+           </th>
         </tr>
     </thead>
     <tbody>
 
-        @if (Model.Student != null)
-        {
-            <tr>
-                <td>  @Model.Student.StudentNo </td>
-                <td> @Model.Student.Name </td>
-                <td> @Model.Student.Adress </td>
+         @if(Model.Student != null)
+        { 
+        <tr>
+            <td>  @Model.Student.StudentNo </td>
+            <td> @Model.Student.Name </td>
+            <td> @Model.Student.Adress </td>
             </tr>
-        }
-
+            }
 
         else if (Model.Students != null)
 
-            @foreach (var item in Model.Students)
+            @foreach (var student in Model.Students)
             {
                 <tr>
-                    <td>  @item.StudentNo </td>
-                    <td> @item.Name </td>
-                    <td> @item.Adress </td>
+                    <td>  @student.StudentNo </td>
+                    <td> @student.Name </td>
+                    <td> @student.Adress </td>
                     <td>
                         <p>
-                            <a asp-page="/Students/GetAllStudents" asp-page-handler="GetAllByStudents" asp-route-aid="@item.StudentNo"> Student´s GetAll  </a>
+                            <a asp-page="/Students/GetAllStudents" asp-page-handler="GetAllByStudents" asp-route-aid="@student.StudentNo"> Student´s GetAll  </a>
                         </p>
                     </td>
                     <td>
                         <p>
-                            <a asp-page="/Student/Create" asp-route-id="@item.StudentNo">New Student</a>
+                            <a asp-page="/Student/Create" asp-route-id="@student.StudentNo">New Student</a>
                         </p>
                     </td>
 
                     <td>
                         <p>
-                            <a asp-page="/Students/Delete" asp-route-id="@item.StudentNo">Delete Student</a>
+                            <a asp-page="/Students/Delete" asp-route-id="@student.StudentNo">Delete Student</a>
                         </p>
                     </td>
                 </tr>

@@ -13,7 +13,7 @@ namespace Obligatorisk_OPG.Services.MockServices.MockStudentService
             new Student() { StudentNo = 5, Name = "Julia", Adress = "USA"},
             new Student() { StudentNo = 6, Name = "Marc Duret", Adress = "France"}
         };
-        public static List<Student> GetStudents()
+        public static List<Student> GetMockStudents()
         {
             return students;
         }

@@ -7,11 +7,49 @@ namespace Obligatorisk_OPG.Services.MockServices.MockStudentService
     {
 
         private List<Student> students;
+
         public StudentService()
         {
-            students = StudentCatalog.GetStudents();
+            students = StudentCatalog.GetMockStudents();
 
         }
+
+        public List<Student> GetAllStudents()
+        {
+            return students;
+        }
+
+        public IEnumerable<Student> GetMockStudents()
+        {
+            return students;
+        }
+
+        public IEnumerable<Student> GetStudents()
+        {
+            return students;
+        }
+
+        public void AddStudent(Student student) 
+        { 
+            students.Add(student);
+        }
+
+        IEnumerable<Student> IStudentService.GetAllStudents()
+        {
+            return students;
+        }
+
+        //public IEnumerable<Student> GetStudentsByAdress(string adress)
+        //{
+        //    List<Student> lst = new List<Student>();
+        //    foreach (var a in students)
+        //    {
+        //        if(a.Adress==adress)
+        //            lst.Add(a);
+        //       return lst;
+        //    }
+        //}
+
 
         //public void AddStudent(Student student)
         //{

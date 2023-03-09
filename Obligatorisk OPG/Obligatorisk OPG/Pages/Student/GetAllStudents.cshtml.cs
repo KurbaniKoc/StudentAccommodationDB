@@ -8,13 +8,36 @@ namespace Obligatorisk_OPG.Pages.Student
 {
     public class GetAllStudentsModel : PageModel
     {
+        [BindProperty(SupportsGet = true)]
+        public string AdressCriteria { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public int IdCriteria { get; set; }
+        public IEnumerable<IStudent> Students { get; set; }
+        public IStudent Student { get; set; }
+
         IStudentService studentService { get; set; }
+
         public GetAllStudentsModel(IStudentService Service)
         {
             studentService = Service;
         }
 
         public void OnGet()
+        {
+            //if (!String.IsNullOrEmpty(AdressCriteria))
+            //{
+            //    Students = studentService.GetStudentsByAdress(AdressCriteria);
+            //}
+            //else if (!String.IsNullOrEmpty(IdCriteria.ToString()) && IdCriteria != 0)
+            //{
+            //    Student = studentService.GetStudentById(IdCriteria);
+            //}
+            //else
+            //    Students = studentService.GetStudents();
+        }
+
+        public void OnPost()
         {
 
         }
