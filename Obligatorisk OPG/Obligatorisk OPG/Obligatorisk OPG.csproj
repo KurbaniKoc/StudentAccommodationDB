@@ -7,4 +7,12 @@
     <RootNamespace>Obligatorisk_OPG</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Dormitory\" />
+    <Folder Include="Pages\Leasing\" />
+    <Folder Include="Pages\Student\" />
+    <Folder Include="Pages\Room\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>
