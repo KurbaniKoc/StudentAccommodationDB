@@ -29,3 +29,14 @@ C:\Users\kurba\Desktop\Obligatoriske OPG\Obligatorisk OPG\Obligatorisk OPG\obj\D
 C:\Users\kurba\Desktop\Obligatoriske OPG\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.pdb
 C:\Users\kurba\Desktop\Obligatoriske OPG\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.genruntimeconfig.cache
 C:\Users\kurba\Desktop\Obligatoriske OPG\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\ref\Obligatorisk OPG.dll
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.csproj.AssemblyReference.cache
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.AssemblyInfoInputs.cache
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.AssemblyInfo.cs
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.csproj.CoreCompileInputs.cache
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.RazorAssemblyInfo.cache
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.RazorAssemblyInfo.cs
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.dll
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\refint\Obligatorisk OPG.dll
+C:\Users\kurba\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.pdb
