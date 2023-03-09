@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Obligatorisk OPG.props" />
+</Project>
