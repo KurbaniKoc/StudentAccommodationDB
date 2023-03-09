@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kurba\\Desktop\\Obligatoriske OPG\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj": {}
+    "C:\\Users\\kurba\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kurba\\Desktop\\Obligatoriske OPG\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj": {
+    "C:\\Users\\kurba\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kurba\\Desktop\\Obligatoriske OPG\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
+        "projectUniqueName": "C:\\Users\\kurba\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
         "projectName": "Obligatorisk OPG",
-        "projectPath": "C:\\Users\\kurba\\Desktop\\Obligatoriske OPG\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
+        "projectPath": "C:\\Users\\kurba\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
         "packagesPath": "C:\\Users\\kurba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kurba\\Desktop\\Obligatoriske OPG\\Obligatorisk OPG\\Obligatorisk OPG\\obj\\",
+        "outputPath": "C:\\Users\\kurba\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kurba\\AppData\\Roaming\\NuGet\\NuGet.Config",
