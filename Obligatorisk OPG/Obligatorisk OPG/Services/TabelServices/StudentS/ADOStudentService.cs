@@ -17,6 +17,11 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
 
         //public IEnumerable<Student> GetStudentsByAdress(string adress)
         //{
+        //    return SQL_Student.GetStudentsByAdress;
+        //}
+
+        //public IEnumerable<Student> GetStudentsByAdress(string adress)
+        //{
         //    return SQL_Student.GetAllStudents();
         //}
 

@@ -41,6 +41,11 @@ namespace Obligatorisk_OPG.Services.MockServices.MockStudentService
 
         //public IEnumerable<Student> GetStudentsByAdress(string adress)
         //{
+        //    return students;
+        //}
+
+        //public IEnumerable<Student> GetStudentsByAdress(string adress)
+        //{
         //    List<Student> lst = new List<Student>();
         //    foreach (var a in students)
         //    {

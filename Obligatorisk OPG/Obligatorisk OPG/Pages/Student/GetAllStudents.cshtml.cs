@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Obligatorisk_OPG.Model;
 using Obligatorisk_OPG.Services.Interfaces;
 using Obligatorisk_OPG.Services.MockServices.MockStudentService;
+using Obligatorisk_OPG.Pages.Student;
 
-namespace Obligatorisk_OPG.Pages.Student
+namespace Obligatorisk_OPG
 {
     public class GetAllStudentsModel : PageModel
     {
@@ -13,10 +14,12 @@ namespace Obligatorisk_OPG.Pages.Student
 
         [BindProperty(SupportsGet = true)]
         public int IdCriteria { get; set; }
-        public IEnumerable<IStudent> Students { get; set; }
-        public IStudent Student { get; set; }
+        public IEnumerable<Student> Students { get; set; }
+        public Student Student { get; set; }
 
         IStudentService studentService { get; set; }
+
+
 
         public GetAllStudentsModel(IStudentService Service)
         {
