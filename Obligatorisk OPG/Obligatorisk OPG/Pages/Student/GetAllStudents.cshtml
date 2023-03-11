@@ -6,30 +6,30 @@
 <h1>Students</h1>
 
 <p>
-    <a asp-page="/Students/Create">Create New Student</a>
+    <a asp-page="/Student/GetAllStudents">GetAllStudents New Student</a>
 </p>
 
 <form>
     <p>
         Search By Adress: <input type="text" asp-for="AdressCriteria" />
         <input type="submit" value="Filter" />
-        <a asp-page="/Students/GetStudents">Back to Full List </a>
+        <a asp-page="/Student/GetAllStudents">Back to Full List </a>
     </p>
 </form>
 <form>
     <p>
         Search By Id: <input type="text" asp-for="IdCriteria" />
         <input type="submit" value="Filter" />
-        <a asp-page="/Students/GetStudents">Back to Full List </a>
+        <a asp-page="/Student/GetAllStudents">Back to Full List </a>
     </p>
 </form>
 
 <h4 style="color:red"> List of students</h4>
 <table class="table">
     <thead>
-        <tr>class="btn-secondary active">
+        <tr>
             <th> 
-                StudentNo 
+                Id 
            </th>
             <th>
                 Name
@@ -44,9 +44,9 @@
          @if(Model.Student != null)
         { 
         <tr>
-            <td>  @Model.Student.StudentNo </td>
+            <td>  @Model.Student.Student_No </td>
             <td> @Model.Student.Name </td>
-            <td> @Model.Student.Adress </td>
+            <td> @Model.Student.Address </td>
             </tr>
             }
 
@@ -55,23 +55,23 @@
             @foreach (var student in Model.Students)
             {
                 <tr>
-                    <td>  @student.StudentNo </td>
+                    <td>  @student.Student_No </td>
                     <td> @student.Name </td>
-                    <td> @student.Adress </td>
+                    <td> @student.Address </td>
                     <td>
                         <p>
-                            <a asp-page="/Students/GetAllStudents" asp-page-handler="GetAllByStudents" asp-route-aid="@student.StudentNo"> Student´s GetAll  </a>
+                            <a asp-page="/Names/GetNames" asp-page-handler="NamesByStudents" asp-route-aid="@student.Student_No"> Student´s names  </a>
                         </p>
                     </td>
                     <td>
                         <p>
-                            <a asp-page="/Student/Create" asp-route-id="@student.StudentNo">New Student</a>
+                            <a asp-page="/Names/Create" asp-route-id="@student.Student_No">New Name</a>
                         </p>
                     </td>
 
                     <td>
                         <p>
-                            <a asp-page="/Students/Delete" asp-route-id="@student.StudentNo">Delete Student</a>
+                            <a asp-page="/Students/Delete" asp-route-id="@student.Student_No">Delete Student</a>
                         </p>
                     </td>
                 </tr>

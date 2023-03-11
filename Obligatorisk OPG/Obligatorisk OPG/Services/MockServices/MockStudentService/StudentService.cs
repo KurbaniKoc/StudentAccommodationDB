@@ -1,5 +1,6 @@
 ﻿using Obligatorisk_OPG.Model;
 using Obligatorisk_OPG.Services.Interfaces;
+using System.Diagnostics.Metrics;
 
 namespace Obligatorisk_OPG.Services.MockServices.MockStudentService
 {
@@ -8,20 +9,14 @@ namespace Obligatorisk_OPG.Services.MockServices.MockStudentService
 
         private List<Student> students;
 
-        public StudentService()
-        {
-            students = StudentCatalog.GetMockStudents();
+        //public StudentService()
+        //{
+        //    students = StudentCatalog.GetStudents();
 
-        }
-
-        public List<Student> GetAllStudents()
+        //}
+        public void AddStudent(Student student)
         {
-            return students;
-        }
-
-        public IEnumerable<Student> GetMockStudents()
-        {
-            return students;
+            students.Add(student);
         }
 
         public IEnumerable<Student> GetStudents()
@@ -29,15 +24,40 @@ namespace Obligatorisk_OPG.Services.MockServices.MockStudentService
             return students;
         }
 
-        public void AddStudent(Student student) 
-        { 
-            students.Add(student);
+        public Student GetStudentById(int id)
+        {
+            foreach (var student in students)
+            {
+                if (student.Student_No == id)
+                    return student;
+            }
+
+            return null;
         }
 
-        IEnumerable<Student> IStudentService.GetAllStudents()
+        public IEnumerable<Student> GetStudentsByAdress(string adress)
+        {
+            List<Student> lst = new List<Student>();
+            foreach (var a in students)
+            {
+                if (a.Address == adress)
+                    lst.Add(a);
+            }
+            return lst;
+        }
+
+        public IEnumerable<Student> GetAllStudents()
         {
             return students;
         }
+
+
+
+
+
+
+
+
 
         //public IEnumerable<Student> GetStudentsByAdress(string adress)
         //{

@@ -21,23 +21,28 @@ namespace Obligatorisk_OPG
 
 
 
-        public GetAllStudentsModel(IStudentService Service)
+        public GetAllStudentsModel(IStudentService service)
         {
-            studentService = Service;
+            studentService = service;
         }
 
         public void OnGet()
         {
-            //if (!String.IsNullOrEmpty(AdressCriteria))
-            //{
-            //    Students = studentService.GetStudentsByAdress(AdressCriteria);
-            //}
-            //else if (!String.IsNullOrEmpty(IdCriteria.ToString()) && IdCriteria != 0)
-            //{
-            //    Student = studentService.GetStudentById(IdCriteria);
-            //}
-            //else
-            //    Students = studentService.GetStudents();
+            if (!String.IsNullOrEmpty(AdressCriteria))
+            {
+                Students = studentService.GetStudentsByAdress(AdressCriteria);
+            }
+            else if (!String.IsNullOrEmpty(IdCriteria.ToString()) && IdCriteria != 0)
+            {
+                Student = studentService.GetStudentById(IdCriteria);
+            }
+            else
+                Students = studentService.GetStudents();
+        }
+
+        public void OnGetStudent(int aid)
+        {
+
         }
 
         public void OnPost()

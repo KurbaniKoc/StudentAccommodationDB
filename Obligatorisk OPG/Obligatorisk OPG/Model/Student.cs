@@ -6,15 +6,13 @@ namespace Obligatorisk_OPG.Model
     {
 
         [Required]
-        public int StudentNo { get; set; }
+        public int Student_No { get; set; }
 
         [Required]
         public string Name { get; set; }
 
         [Required]
-        public string Adress { get; set; }
-
-        List<Student> students = new List<Student>();
+        public string Address { get; set; }
 
     }
     

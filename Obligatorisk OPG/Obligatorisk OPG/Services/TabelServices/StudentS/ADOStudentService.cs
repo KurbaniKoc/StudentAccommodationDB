@@ -10,35 +10,24 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
             SQL_Student.AddStudent(student);
         }
 
+        public Student GetStudentById(int id)
+        {
+            return SQL_Student.GetStudentById(id);
+        }
+
         public IEnumerable<Student> GetAllStudents()
         {
             return SQL_Student.GetAllStudents();
         }
 
-        //public IEnumerable<Student> GetStudentsByAdress(string adress)
-        //{
-        //    return SQL_Student.GetStudentsByAdress;
-        //}
+        public IEnumerable<Student> GetStudentsByAdress(string adress)
+        {
+            return SQL_Student.GetAllStudentsByAdress(adress);
+        }
 
-        //public IEnumerable<Student> GetStudentsByAdress(string adress)
-        //{
-        //    return SQL_Student.GetAllStudents();
-        //}
-
-
-        //public IEnumerable<Student> GetStudents()
-        //{
-        //    return SQL_Student.GetAllStudents();
-        //}
-
-        //List<Student> IStudentService.GetAllStudents()
-        //{
-        //    return SQL_Student.GetAllStudents();
-        //}
-
-        //IEnumerable<Student> IStudentService.NameSearch(string name)
-        //{
-        //    return SQL_Student.GetAllStudents();
-        //}
+        public IEnumerable<Student> GetStudents()
+        {
+            return SQL_Student.GetAllStudents();
+        }
     }
 }
