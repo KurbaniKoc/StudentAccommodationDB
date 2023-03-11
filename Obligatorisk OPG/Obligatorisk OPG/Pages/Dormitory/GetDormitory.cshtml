@@ -1,0 +1,58 @@
+﻿@page
+@model Obligatorisk_OPG.Pages.Dormitory.ViewDormitoryModel
+@{
+}
+
+
+<h4 style="color:red"> List of Dormitories</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Dormitory Number </th>
+            <th> Name  </th>
+            <th> Address  </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Dormitory != null)
+        {
+            <tr>
+                <td>  @Model.Dormitory.DormitaryNumber </td>
+                <td> @Model.Actor.Name </td>
+                <td> @Model.Actor.Birth_year </td>
+                <td> @Model.Actor.Alive </td>
+                <td> @Model.Actor.Country </td>
+            </tr>
+        }
+
+
+        else if (Model.Dormitory != null)
+
+            @foreach (var item in Model.Dormitory)
+            {
+                <tr>
+                    <td>  @item.Id </td>
+                    <td> @item.Name </td>
+                    <td> @item.Birth_year </td>
+                    <td> @item.Alive </td>
+                    <td> @item.Country </td>
+                    <td>
+                        <p>
+                            <a asp-page="/Movies/GetMovies" asp-page-handler="MoviesByActor" asp-route-aid="@item.Id"> Actor´s movies  </a>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <a asp-page="/Movies/Create" asp-route-id="@item.Id">New Movie</a>
+                        </p>
+                    </td>
+
+                    <td>
+                        <p>
+                            <a asp-page="/Actors/Delete" asp-route-id="@item.Id">Delete Actor</a>
+                        </p>
+                    </td>
+                </tr>
+            }
+</table>
