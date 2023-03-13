@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
 using Obligatorisk_OPG.Services.Interfaces;
-using Obligatorisk_OPG.Services.MockServices.MockDormitoryService;
 
 namespace Obligatorisk_OPG
 {

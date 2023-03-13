@@ -5,7 +5,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
 {
     public class SQL_Student
     {
-        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MovieDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog= StudentAccommodationDB;";
         private static List<Student> listStudents;
 
         public static void AddStudent(Student student)

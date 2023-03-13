@@ -5,6 +5,10 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
 {
     public class ADOStudentService : IStudentService
     {
+        public IEnumerable<Student> GetAll()
+        {
+            return SQL_Student.GetAllStudents();
+        }
         public void AddStudent(Student student)
         {
             SQL_Student.AddStudent(student);
@@ -25,9 +29,9 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
             return SQL_Student.GetAllStudentsByAdress(adress);
         }
 
-        public IEnumerable<Student> GetStudents()
-        {
-            return SQL_Student.GetAllStudents();
-        }
+        //public IEnumerable<Student> GetStudents()
+        //{
+        //    return SQL_Student.GetAllStudents();
+        //}
     }
 }

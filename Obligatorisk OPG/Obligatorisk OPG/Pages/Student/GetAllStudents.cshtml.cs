@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Obligatorisk_OPG.Model;
 using Obligatorisk_OPG.Services.Interfaces;
-using Obligatorisk_OPG.Services.MockServices.MockStudentService;
 using Obligatorisk_OPG.Pages.Student;
 
 namespace Obligatorisk_OPG
@@ -28,17 +27,21 @@ namespace Obligatorisk_OPG
 
         public void OnGet()
         {
-            if (!String.IsNullOrEmpty(AdressCriteria))
-            {
-                Students = studentService.GetStudentsByAdress(AdressCriteria);
-            }
-            else if (!String.IsNullOrEmpty(IdCriteria.ToString()) && IdCriteria != 0)
-            {
-                Student = studentService.GetStudentById(IdCriteria);
-            }
-            else
-                Students = studentService.GetStudents();
+            //if (!String.IsNullOrEmpty(AdressCriteria))
+            //{
+            //    Students = studentService.GetStudentsByAdress(AdressCriteria);
+            //}
+            //else if (!String.IsNullOrEmpty(IdCriteria.ToString()) && IdCriteria != 0)
+            //{
+            //    Student = studentService.GetStudentById(IdCriteria);
+            //}
+            //else
+            //    Students = studentService.GetAllStudents();
+
+            Students = studentService.GetAll();
         }
+        
+      
 
         public void OnGetStudent(int aid)
         {

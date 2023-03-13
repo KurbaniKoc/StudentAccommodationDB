@@ -1,6 +1,5 @@
 ﻿using Obligatorisk_OPG.Services.Interfaces;
-using Obligatorisk_OPG.Services.MockServices.MockDormitoryService;
-using Obligatorisk_OPG.Services.MockServices.MockStudentService;
+using Obligatorisk_OPG.Services.TabelServices.StudentS;
 
 namespace Obligatorisk_OPG
 {
@@ -20,7 +19,8 @@ namespace Obligatorisk_OPG
             //  services.AddSingleton<IMovieService, MovieService>();
             // services.AddSingleton<IActorService, ActorService>();
 
-            services.AddTransient<IStudentService, StudentService>();
+            services.AddTransient<IStudentService, ADOStudentService>();
+            
 
         }
 
