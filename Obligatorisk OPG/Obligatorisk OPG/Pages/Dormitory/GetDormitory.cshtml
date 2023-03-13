@@ -1,0 +1,41 @@
+﻿@page
+@model Obligatorisk_OPG.ViewDormitoryModel
+@{
+}
+
+
+<h4 style="color:red"> List of Dormitories</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Dormitory Number </th>
+            <th> Name  </th>
+            <th> Address  </th>
+        </tr>
+    </thead>
+    <tbody>
+
+      @*  @if (Model.Dormitory != null)
+        {
+            <tr>
+                <td>  @Model.Dormitory.Dormitory_No </td>
+                <td> @Model.Dormitory.Name </td>
+                <td> @Model.Dormitory.Address </td>             
+            </tr>
+        }*@
+
+
+       @* else if (Model.Dormitory != null)*@
+
+            @foreach (var item in Model.Dormitories)
+            {
+                <tr>
+                    <td>  @item.Dormitory_No </td>
+                    <td> @item.Name </td>
+                    <td> @item.Address </td>                                                      
+                                 
+                </tr>
+            }
+
+
+</table>

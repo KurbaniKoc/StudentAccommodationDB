@@ -8,18 +8,18 @@
 
         public Dormitory(int dormitoryNo, string name, string adress)
         {
-            DormitoryNo = dormitoryNo;
+            Dormitory_No = dormitoryNo;
             Name = name;
-            Adress = adress;
+            Address = adress;
         }
 
-        public int DormitoryNo { get; set; }
+        public int Dormitory_No { get; set; }
         public string Name { get; set; }
-        public string Adress { get; set; }
+        public string Address { get; set; }
 
         public override string ToString()
         {
-            return $"{{{nameof(DormitoryNo)}={DormitoryNo.ToString()}, {nameof(Name)}={Name}, {nameof(Adress)}={Adress}}}";
+            return $"{{{nameof(Dormitory_No)}={Dormitory_No.ToString()}, {nameof(Name)}={Name}, {nameof(Address)}={Address}}}";
         }
     }
 }

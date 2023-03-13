@@ -1,5 +1,7 @@
 ﻿using Obligatorisk_OPG.Services.Interfaces;
-using Obligatorisk_OPG.Services.TabelServices.StudentS;
+using Obligatorisk_OPG.Services.TabelServices;
+using Obligatorisk_OPG.Services.TabelServices.DormitroyS;
+using Obligatorisk_OPG.Services.TabelServices.RoomS;
 
 namespace Obligatorisk_OPG
 {
@@ -16,11 +18,9 @@ namespace Obligatorisk_OPG
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            //  services.AddSingleton<IMovieService, MovieService>();
-            // services.AddSingleton<IActorService, ActorService>();
 
-            services.AddTransient<IStudentService, ADOStudentService>();
-            
+            services.AddTransient<IDormitoryService, DormitoryService>();
+            services.AddTransient<IRoomService, RoomService>();
 
         }
 
