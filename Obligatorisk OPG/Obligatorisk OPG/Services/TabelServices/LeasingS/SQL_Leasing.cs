@@ -6,7 +6,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
 {
     public class SQL_Leasing
     {
-        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = StudentAccommodationDB;";
+        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StudentAccommodation;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         //public static void AddLeasing(Leasing leasing)
         //{
         //    string query = $"INSERT into Leasing(LeasingNo, DateFrom, DateTo, StudentNo, RoomNo, DormitoryNumber) Values(@Leasing_No, @Date_From, @Date_to, @Student_No, @Room_No, @Dormitory_Number)";
