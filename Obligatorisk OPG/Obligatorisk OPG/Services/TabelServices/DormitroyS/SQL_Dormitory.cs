@@ -22,9 +22,9 @@ namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
                     while (reader.Read())
                     {
                         Dormitory dormitory = new Dormitory();
-                        dormitory.DormitoryNo = Convert.ToInt32(reader[0]);
+                        dormitory.Dormitory_No = Convert.ToInt32(reader[0]);
                         dormitory.Name = Convert.ToString(reader[1]);
-                        dormitory.Adress = Convert.ToString(reader[2]);
+                        dormitory.Address = Convert.ToString(reader[2]);
                         dormitoryList.Add(dormitory);
                     }
                 }

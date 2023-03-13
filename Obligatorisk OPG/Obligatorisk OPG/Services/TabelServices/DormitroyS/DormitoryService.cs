@@ -3,12 +3,12 @@ using Obligatorisk_OPG.Services.Interfaces;
 
 namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
 {
-    public class DormitoryService:IDormitroyService
+    public class DormitoryService:IDormitoryService
     {
-        private List<Dormitory> dormitories;
+       
         public IEnumerable<Dormitory> GetDormitories()
         {
-            return dormitories;
+            return SQL_Dormitory.GetAllDormitories();
         }
 
     }

@@ -40,3 +40,25 @@ C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OP
 C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.dll
 C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\refint\Obligatorisk OPG.dll
 C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.pdb
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\appsettings.json
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\Obligatorisk OPG.staticwebassets.runtime.json
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\Obligatorisk OPG.exe
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\Obligatorisk OPG.deps.json
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\Obligatorisk OPG.runtimeconfig.json
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\Obligatorisk OPG.dll
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\Obligatorisk OPG.pdb
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\scopedcss\bundle\Obligatorisk OPG.styles.css
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\scopedcss\projectbundle\Obligatorisk OPG.bundle.scp.css
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.csproj.CopyComplete
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\Obligatorisk OPG.genruntimeconfig.cache
+C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\obj\Debug\net6.0\ref\Obligatorisk OPG.dll

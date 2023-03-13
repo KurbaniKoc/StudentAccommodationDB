@@ -1,5 +1,5 @@
 ﻿@page
-@model Obligatorisk_OPG.Pages.Dormitory.ViewDormitoryModel
+@model Obligatorisk_OPG.ViewDormitoryModel
 @{
 }
 
@@ -15,44 +15,27 @@
     </thead>
     <tbody>
 
-        @if (Model.Dormitory != null)
+      @*  @if (Model.Dormitory != null)
         {
             <tr>
-                <td>  @Model.Dormitory.DormitaryNumber </td>
-                <td> @Model.Actor.Name </td>
-                <td> @Model.Actor.Birth_year </td>
-                <td> @Model.Actor.Alive </td>
-                <td> @Model.Actor.Country </td>
+                <td>  @Model.Dormitory.Dormitory_No </td>
+                <td> @Model.Dormitory.Name </td>
+                <td> @Model.Dormitory.Address </td>             
             </tr>
-        }
+        }*@
 
 
-        else if (Model.Dormitory != null)
+       @* else if (Model.Dormitory != null)*@
 
-            @foreach (var item in Model.Dormitory)
+            @foreach (var item in Model.Dormitories)
             {
                 <tr>
-                    <td>  @item.Id </td>
+                    <td>  @item.Dormitory_No </td>
                     <td> @item.Name </td>
-                    <td> @item.Birth_year </td>
-                    <td> @item.Alive </td>
-                    <td> @item.Country </td>
-                    <td>
-                        <p>
-                            <a asp-page="/Movies/GetMovies" asp-page-handler="MoviesByActor" asp-route-aid="@item.Id"> Actor´s movies  </a>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a asp-page="/Movies/Create" asp-route-id="@item.Id">New Movie</a>
-                        </p>
-                    </td>
-
-                    <td>
-                        <p>
-                            <a asp-page="/Actors/Delete" asp-route-id="@item.Id">Delete Actor</a>
-                        </p>
-                    </td>
+                    <td> @item.Address </td>                                                      
+                                 
                 </tr>
             }
+
+
 </table>
