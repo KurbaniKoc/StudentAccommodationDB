@@ -1,9 +1,11 @@
-﻿namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
+﻿using Obligatorisk_OPG.Model;
+using System.Data.SqlClient;
+
+
+namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
 {
     public class SQL_Leasing
     {
-<<<<<<< Updated upstream
-=======
         static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StudentAccommodation;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         //public static void AddLeasing(Leasing leasing)
         //{
@@ -145,6 +147,5 @@
         //    }
         //    return actor;
         //}
->>>>>>> Stashed changes
     }
 }

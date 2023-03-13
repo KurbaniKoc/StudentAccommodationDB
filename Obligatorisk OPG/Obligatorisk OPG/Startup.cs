@@ -1,7 +1,9 @@
 ﻿using Obligatorisk_OPG.Services.Interfaces;
 using Obligatorisk_OPG.Services.TabelServices;
 using Obligatorisk_OPG.Services.TabelServices.DormitroyS;
+using Obligatorisk_OPG.Services.TabelServices.LeasingS;
 using Obligatorisk_OPG.Services.TabelServices.RoomS;
+using Obligatorisk_OPG.Services.TabelServices.StudentS;
 
 namespace Obligatorisk_OPG
 {
@@ -21,6 +23,8 @@ namespace Obligatorisk_OPG
 
             services.AddTransient<IDormitoryService, DormitoryService>();
             services.AddTransient<IRoomService, RoomService>();
+            services.AddTransient<IStudentService, ADOStudentService>();
+            services.AddTransient<ILeasingServiceM, LeasingServiceM>();
 
         }
 

@@ -1,25 +1,22 @@
-﻿namespace Obligatorisk_OPG.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Obligatorisk_OPG.Model
 {
     public class Student
     {
-        public Student()
-        {
-        }
 
-        public Student(int studentNo, string name, string adress)
-        {
-            StudentNo = studentNo;
-            Name = name;
-            Adress = adress;
-        }
+        [Required]
+        public int Student_No { get; set; }
 
-        public int StudentNo { get; set; }
+        [Required]
         public string Name { get; set; }
-        public string Adress { get; set; }
 
-        public override string ToString()
-        {
-            return $"{{{nameof(StudentNo)}={StudentNo.ToString()}, {nameof(Name)}={Name}, {nameof(Adress)}={Adress}}}";
-        }
+        [Required]
+        public string Address { get; set; }
+
     }
+    
+
 }
+
+
