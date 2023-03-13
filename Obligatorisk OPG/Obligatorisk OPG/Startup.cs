@@ -1,5 +1,5 @@
 ﻿using Obligatorisk_OPG.Services.Interfaces;
-using Obligatorisk_OPG.Services.TabelServices.LeasingS;
+using Obligatorisk_OPG.Services.TabelServices.StudentS;
 
 namespace Obligatorisk_OPG
 {
@@ -18,10 +18,9 @@ namespace Obligatorisk_OPG
             services.AddRazorPages();
             //  services.AddSingleton<IMovieService, MovieService>();
             // services.AddSingleton<IActorService, ActorService>();
-            //services.AddSingleton<ILeasingService, LeasingService>();
 
-            services.AddTransient<ILeasingServiceM, LeasingServiceM>();
-            //services.AddTransient<ILeasingServiceM, LeasingServiceM>();
+            services.AddTransient<IStudentService, ADOStudentService>();
+            
 
         }
 

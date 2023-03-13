@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Obligatorisk_OPG.Services.Interfaces;
 
-
 namespace Obligatorisk_OPG
 {
     public class Program
