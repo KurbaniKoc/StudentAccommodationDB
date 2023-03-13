@@ -3,39 +3,88 @@
 @{
 }
 
+<style>
+    /* Table styles */
+    .table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+        border: 1px solid #e5e5e5;
+    }
 
-<h4 style="color:red"> List of Dormitories</h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th> Dormitory Number </th>
-            <th> Name  </th>
-            <th> Address  </th>
-        </tr>
-    </thead>
-    <tbody>
+        .table thead th {
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 14px;
+            padding: 12px;
+            border: none;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-      @*  @if (Model.Dormitory != null)
-        {
-            <tr>
-                <td>  @Model.Dormitory.Dormitory_No </td>
-                <td> @Model.Dormitory.Name </td>
-                <td> @Model.Dormitory.Address </td>             
-            </tr>
-        }*@
+        .table tbody td {
+            font-size: 14px;
+            padding: 12px;
+            border: none;
+        }
 
+        .table tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
 
-       @* else if (Model.Dormitory != null)*@
+        .table tbody tr:hover {
+            background-color: #f9f9f9;
+        }
 
-            @foreach (var item in Model.Dormitories)
-            {
+    /* Heading styles */
+    h4 {
+        color: #000000;
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* Body styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: #000000;
+        background-color: #ffffff;
+        padding-top: 80px;
+    }
+
+    /* Container styles */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h4>List of Dormitories</h4>
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>  @item.Dormitory_No </td>
-                    <td> @item.Name </td>
-                    <td> @item.Address </td>                                                      
-                                 
+                    <th>Dormitory Number</th>
+                    <th>Name</th>
+                    <th>Address</th>
                 </tr>
-            }
-
-
-</table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Dormitories)
+                {
+                    <tr>
+                        <td>@item.Dormitory_No</td>
+                        <td>@item.Name</td>
+                        <td>@item.Address</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

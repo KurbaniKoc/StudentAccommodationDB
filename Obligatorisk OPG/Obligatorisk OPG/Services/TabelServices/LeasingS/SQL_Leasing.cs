@@ -50,6 +50,29 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
             return LeasingList;
         }
 
+        public static List<Room> GetAllAvailableRooms()
+        {
+            List<Room> roomList = new List<Room>();
+            string query = "SELECT Room.Room_No, Room.Types, Room.Price FROM Leasing RIGHT JOIN Room \r\nON Leasing.Room_No = Room.Room_No WHERE Leasing.Room_No IS NULL;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Room room = new Room();
+                        room.RoomNo = Convert.ToInt32(reader[0]);
+                        room.Types = Convert.ToString(reader[1]);
+                        room.Price = Convert.ToInt32(reader[2]);                      
+                        roomList.Add(room);
+                    }
+                }
+            }
+            return roomList;
+        }
+
         //public static void DeleteLeasing(Leasing leasing)
         //{
         //    string query = $" DELETE from Leasing where LeasingNO=@Leasing_No";
