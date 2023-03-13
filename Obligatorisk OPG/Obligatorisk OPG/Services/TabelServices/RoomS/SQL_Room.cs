@@ -5,7 +5,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.RoomS
 {
     public class SQL_Room
     {
-        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = StudentAccommodation; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = StudentAccommodationDB;";
         public static List<Room> GetAllRooms()
         {
             List<Room> roomList = new List<Room>();

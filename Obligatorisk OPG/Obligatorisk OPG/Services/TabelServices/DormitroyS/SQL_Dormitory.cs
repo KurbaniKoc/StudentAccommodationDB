@@ -8,7 +8,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
 {
     public class SQL_Dormitory
     {
-        static string connectionString =@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = StudentAccommodation; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        static string connectionString =@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = StudentAccommodationDB";
         public static List<Dormitory> GetAllDormitories()
         {
             List<Dormitory> dormitoryList = new List<Dormitory>();

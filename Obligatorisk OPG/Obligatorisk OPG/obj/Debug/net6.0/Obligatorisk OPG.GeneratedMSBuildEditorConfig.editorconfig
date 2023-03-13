@@ -5,72 +5,73 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Obligatorisk_OPG
 build_property.RootNamespace = Obligatorisk_OPG
-build_property.ProjectDir = C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\
+build_property.ProjectDir = C:\Users\madsg\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\mahoe\OneDrive\Dokumenter\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG
+build_property.MSBuildProjectDirectory = C:\Users\madsg\Documents\GitHub\StudentAccommodationDB\Obligatorisk OPG\Obligatorisk OPG
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Dormitory/CreateDormitory.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Dormitory/CreateDormitory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9ybWl0b3J5XENyZWF0ZURvcm1pdG9yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Dormitory/GetDormitory.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Dormitory/GetDormitory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9ybWl0b3J5XEdldERvcm1pdG9yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Error.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Index.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Leasing/CreateLeasing.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Leasing/CreateLeasing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhc2luZ1xDcmVhdGVMZWFzaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Leasing/GetLeasing.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Leasing/GetLeasing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhc2luZ1xHZXRMZWFzaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Privacy.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Room/CreateRoom.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Room/CreateRoom.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVxDcmVhdGVSb29tLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Room/GetRooms.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Room/GetRooms.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVxHZXRSb29tcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Student/CreateStudent.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Student/CreateStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudFxDcmVhdGVTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Student/GetAllStudents.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Student/GetAllStudents.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudFxHZXRBbGxTdHVkZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/_ViewImports.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/_ViewStart.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahoe/OneDrive/Dokumenter/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Shared/_Layout.cshtml]
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-u124oih58m
