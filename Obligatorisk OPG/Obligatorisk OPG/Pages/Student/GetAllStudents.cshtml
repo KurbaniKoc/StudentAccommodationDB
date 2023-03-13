@@ -41,16 +41,7 @@
     </thead>
     <tbody>
 
-        @* @if(Model.Student != null)
-        { 
-        <tr>
-            <td>  @Model.Student.Student_No </td>
-            <td> @Model.Student.Name </td>
-            <td> @Model.Student.Address </td>
-            </tr>
-            }
-
-        else if (Model.Students != null)*@
+        
 
             @foreach (var student in Model.Students)
             {
@@ -58,22 +49,12 @@
                     <td>  @student.Student_No </td>
                     <td> @student.Name </td>
                     <td> @student.Address </td>
-          @*          <td>
-                        <p>
-                            <a asp-page="/Names/GetNames" asp-page-handler="NamesByStudents" asp-route-aid="@student.Student_No"> Student´s names  </a>
-                        </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a asp-page="/Names/Create" asp-route-id="@student.Student_No">New Name</a>
-                        </p>
-                    </td>*@
-@*
-                    <td>
-                        <p>
-                            <a asp-page="/Students/Delete" asp-route-id="@student.Student_No">Delete Student</a>
-                        </p>
-                    </td>*@
+                @*<td>
+                    <p>
+                        <a asp-page="/Leasing/GetLeasing" asp-page-handler="LeasingByLeasingNo" asp-route-aid="@"> Leasing No  </a>
+                    </p>
+                </td>*@
+    
                 </tr>
             }
 </table>
