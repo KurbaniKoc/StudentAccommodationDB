@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Obligatorisk_OPG.Model;
 using Obligatorisk_OPG.Pages.Dormitory;
 using Obligatorisk_OPG.Services.Interfaces;
+using Obligatorisk_OPG.Services.TabelServices.RoomS;
 
 namespace Obligatorisk_OPG
 
@@ -25,6 +26,11 @@ namespace Obligatorisk_OPG
         {
             Dormitories = dormitoryService.GetDormitories();
 
+        }
+
+        public void OnGetRooms(int aid)
+        {
+            
         }
 
         public void OnPost()

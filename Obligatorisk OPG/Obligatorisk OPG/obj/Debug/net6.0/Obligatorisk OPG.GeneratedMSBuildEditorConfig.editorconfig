@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhc2luZ1xHZXRMZWFzaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Leasing/GetLeasing_Student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhc2luZ1xHZXRMZWFzaW5nX1N0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Room/GetRooms.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVxHZXRSb29tcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Room/GetRoom_Dormitory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVxHZXRSb29tX0Rvcm1pdG9yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/madsg/Documents/GitHub/StudentAccommodationDB/Obligatorisk OPG/Obligatorisk OPG/Pages/Shared/_ValidationScriptsPartial.cshtml]

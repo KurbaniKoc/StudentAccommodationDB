@@ -15,27 +15,33 @@
     </thead>
     <tbody>
 
-      @*  @if (Model.Dormitory != null)
+        @*  @if (Model.Dormitory != null)
         {
-            <tr>
-                <td>  @Model.Dormitory.Dormitory_No </td>
-                <td> @Model.Dormitory.Name </td>
-                <td> @Model.Dormitory.Address </td>             
-            </tr>
+        <tr>
+        <td>  @Model.Dormitory.Dormitory_No </td>
+        <td> @Model.Dormitory.Name </td>
+        <td> @Model.Dormitory.Address </td>
+        </tr>
         }*@
 
 
-       @* else if (Model.Dormitory != null)*@
+        @* else if (Model.Dormitory != null)*@
 
-            @foreach (var item in Model.Dormitories)
-            {
-                <tr>
-                    <td>  @item.Dormitory_No </td>
-                    <td> @item.Name </td>
-                    <td> @item.Address </td>                                                      
-                                 
-                </tr>
-            }
+        @foreach (var item in Model.Dormitories)
+        {
+            <tr>
+                <td>  @item.Dormitory_No </td>
+                <td> @item.Name </td>
+                <td> @item.Address </td>
+
+                <td>
+                    <p>
+                        <a asp-page="/Room/GetRoom_Dormitory" asp-page-handler="GetRoom_Dormitory" asp-route-aid="@item.Dormitory_No"> Show Rooms in Dormitory  </a>
+                    </p>
+                </td>
+
+            </tr>
+        }
 
 
 </table>
