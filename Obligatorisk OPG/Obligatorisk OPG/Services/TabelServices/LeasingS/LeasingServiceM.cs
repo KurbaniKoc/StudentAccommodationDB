@@ -8,10 +8,17 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
 {
     public class LeasingServiceM : ILeasingServiceM
     {
+        public void AddLeasing(Leasing leasing)
+        {
+            SQL_Leasing.AddLeasing(leasing );
+        }
+
         public IEnumerable<Leasing> GetAll()
         {
             return SQL_Leasing.GetAllLeasings();
         }
+
+
 
         public IEnumerable<Leasing> GetAllLeasing()
         {

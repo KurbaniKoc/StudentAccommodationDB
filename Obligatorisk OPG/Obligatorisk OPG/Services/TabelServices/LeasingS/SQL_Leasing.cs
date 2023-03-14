@@ -7,23 +7,27 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
     public class SQL_Leasing
     {
         static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = StudentAccommodationDB;";
-        //public static void AddLeasing(Leasing leasing)
-        //{
-        //    string query = $"INSERT into Leasing(LeasingNo, DateFrom, DateTo, StudentNo, RoomNo, DormitoryNumber) Values(@Leasing_No, @Date_From, @Date_to, @Student_No, @Room_No, @Dormitory_Number)";
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        using (SqlCommand command = new SqlCommand(query, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@Leasing_No", leasing.LeasingNo);
-        //            command.Parameters.AddWithValue("@Date_From", leasing.DateFrom);
-        //            command.Parameters.AddWithValue("@Date_To", leasing.DateTo);
-        //            command.Parameters.AddWithValue("@Student_No", leasing)
-                    
-        //            int affectedRows = command.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
+        public static void AddLeasing(Leasing leasing)
+        {
+            string query = $"INSERT into Leasing(Leasing_No, Date_From, Date_To, Student_No, Room_No, Dormitory_Number) Values(@Leasing_No, @Date_From, @Date_To, @Student_No, @Room_No, @Dormitory_Number)";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Leasing_No", leasing.LeasingNo);
+                    command.Parameters.AddWithValue("@Date_From", leasing.DateFrom);
+                    command.Parameters.AddWithValue("@Date_To", leasing.DateTo);
+                    command.Parameters.AddWithValue("@Student_No", leasing.StudentNo);
+                    command.Parameters.AddWithValue("@Room_No", leasing.RoomNo);
+                    command.Parameters.AddWithValue("@Dormitory_Number", leasing.DormitoryNumber);
+
+
+                    int affectedRows = command.ExecuteNonQuery();
+                }
+            }
+            
+        }
         public static List<Leasing> GetAllLeasings()
         {
             List<Leasing> LeasingList = new List<Leasing>();
