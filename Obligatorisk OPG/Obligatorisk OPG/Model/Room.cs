@@ -6,7 +6,7 @@
         {
         }
 
-        public Room(int roomNo, string types, double price)
+        public Room(int roomNo, string types, string price)
         {
             RoomNo = roomNo;
             Types = types;
@@ -15,7 +15,8 @@
 
         public int RoomNo { get; set; }
         public string Types { get; set; }
-        public double Price { get; set; }
+        public string Price { get; set; }
+        public int DormitoryNo { get; set; }
 
         public override string ToString()
         {

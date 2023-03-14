@@ -9,4 +9,6 @@ namespace Obligatorisk_OPG.Services.Interfaces
         IEnumerable<Dormitory> GetDormitories();
 
     }
+
+
 }

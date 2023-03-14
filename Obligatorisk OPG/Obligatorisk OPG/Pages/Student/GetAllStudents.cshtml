@@ -30,33 +30,33 @@
 <table class="table">
     <thead>
         <tr>
-            <th> 
-                Id 
-           </th>
+            <th>
+                Id
+            </th>
             <th>
                 Name
-           </th>
-            <th> 
+            </th>
+            <th>
                 Adress
-           </th>
+            </th>
         </tr>
     </thead>
     <tbody>
 
-        
 
-            @foreach (var student in Model.Students)
-            {
-                <tr>
-                    <td>  @student.Student_No </td>
-                    <td> @student.Name </td>
-                    <td> @student.Address </td>
-                @*<td>
+
+        @foreach (var student in Model.Students)
+        {
+            <tr>
+                <td>  @student.Student_No </td>
+                <td> @student.Name </td>
+                <td> @student.Address </td>
+                <td>
                     <p>
-                        <a asp-page="/Leasing/GetLeasing" asp-page-handler="LeasingByLeasingNo" asp-route-aid="@"> Leasing No  </a>
+                        <a asp-page="/Leasing/GetLeasing_Student" asp-page-handler="GetLeasing_Student" asp-route-aid="@student.Student_No"> Show Leasings for Student  </a>
                     </p>
-                </td>*@
-    
-                </tr>
-            }
+                </td>
+
+            </tr>
+        }
 </table>

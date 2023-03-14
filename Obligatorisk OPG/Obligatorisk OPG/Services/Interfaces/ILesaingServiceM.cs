@@ -1,4 +1,5 @@
 ﻿using Obligatorisk_OPG.Model;
+using Obligatorisk_OPG.ViewModels;
 
 namespace Obligatorisk_OPG.Services.Interfaces
 {
@@ -7,6 +8,7 @@ namespace Obligatorisk_OPG.Services.Interfaces
         IEnumerable<Leasing> GetAllLeasing();
         IEnumerable<Leasing> GetAll();
         void AddLeasing(Leasing leasing);
+        public IEnumerable<Leasing_Student> GetLeasingStudent(int id);
 
 
 
