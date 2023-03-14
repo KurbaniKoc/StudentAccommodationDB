@@ -35,7 +35,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
         public static List<Room_Student> GetRoomsAndStudents(int did)
         {
             List<Room_Student> ListRoomStudent = new List<Room_Student>();
-            string query = "select Leasing.Dormitory_Number, Leasing.Student_No, Leasing.Room_No" +
+            string query = "select Leasing.Dormitory_Number, Leasing.Student_No, Leasing.Room_No, Student.Name" +
                 " From Leasing" +
                 " join Dormitory" +
                 " on Leasing.Dormitory_Number = Dormitory.Dormitory_No" +
@@ -57,6 +57,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
                             room_Student.StudentNo = Convert.ToInt32(reader[0]);
                             room_Student.RoomNo = Convert.ToInt32(reader[1]);
                             room_Student.DormitoryNo = Convert.ToInt32(reader[2]);
+                            room_Student.StudentName = Convert.ToString(reader[3]);
                             
                             ListRoomStudent.Add(room_Student);
                         }

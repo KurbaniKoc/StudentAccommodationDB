@@ -9,7 +9,7 @@ namespace Obligatorisk_OPG.ViewModels
         
         [Required] public int DormitoryNo { get; set; }
         [Required] public int StudentNo { get; set; }
-        
+        [Required] public string StudentName { get; set; }
 
     }
 }
