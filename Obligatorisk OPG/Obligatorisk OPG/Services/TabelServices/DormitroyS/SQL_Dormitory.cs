@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using Obligatorisk_OPG.Model;
+using Obligatorisk_OPG.ViewModels;
 
 namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
 
@@ -30,6 +31,39 @@ namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
                 }
             }
             return dormitoryList;
+        }
+        public static List<Room_Student> GetRoomsAndStudents(int did)
+        {
+            List<Room_Student> ListRoomStudent = new List<Room_Student>();
+            string query = "select Leasing.Dormitory_Number, Leasing.Student_No, Leasing.Room_No" +
+                " From Leasing" +
+                " join Dormitory" +
+                " on Leasing.Dormitory_Number = Dormitory.Dormitory_No" +
+                " join Student" +
+                " on Leasing.Student_No = Student.Student_No" +
+                " Where @did = Leasing.Dormitory_Number"; 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@did", did);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                        
+                    {
+                        while (reader.Read())
+                        {
+                            Room_Student room_Student = new Room_Student();
+                            room_Student.StudentNo = Convert.ToInt32(reader[0]);
+                            room_Student.RoomNo = Convert.ToInt32(reader[1]);
+                            room_Student.DormitoryNo = Convert.ToInt32(reader[2]);
+                            
+                            ListRoomStudent.Add(room_Student);
+                        }
+                    }
+                }
+            }
+            return ListRoomStudent;
         }
     }
 }
