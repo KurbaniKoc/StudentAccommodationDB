@@ -1,4 +1,50 @@
 ﻿@page
-@model Obligatorisk_OPG.Pages.Leasing.CreateLeasingModel
+@model Obligatorisk_OPG.CreateLeasingModel
 @{
+    ViewData["Title"] = "CreateLeasing";
 }
+<h1> Create Leasing </h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="  ModelOnly  " class="text-danger">
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.leasing.LeasingNo" class="control-label"></label>
+                <input asp-for="@Model.leasing.LeasingNo" class="form-control" />
+                <span asp-validation-for="@Model.leasing.LeasingNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.leasing.DateFrom" class="control-label"></label>
+                <input asp-for="@Model.leasing.DateFrom" class="form-control" />
+                <span asp-validation-for="@Model.leasing.DateFrom" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.leasing.DateTo" class="control-label"></label>
+                <input asp-for="@Model.leasing.DateTo" class="form-control" />
+                <span asp-validation-for="@Model.leasing.DateTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.leasing.StudentNo" class="control-label"></label>
+                <input asp-for="@Model.leasing.StudentNo" class="form-control" />
+                <span asp-validation-for="@Model.leasing.StudentNo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.leasing.RoomNo" class="control-label"></label>
+                <input asp-for="@Model.leasing.RoomNo" class="form-control" />
+                <span asp-validation-for="@Model.leasing.RoomNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.leasing.DormitoryNumber" class="control-label"></label>
+                <input asp-for="@Model.leasing.DormitoryNumber" class="form-control" />
+                <span asp-validation-for="@Model.leasing.DormitoryNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
