@@ -29,6 +29,7 @@ namespace Obligatorisk_OPG
                 return Page();
             }
             leasingServiceM.AddLeasing(leasing);
+            //Create a method called changeRoomStatus som tager leasing som argument SetRoomOccapied = true
             return RedirectToPage("GetLeasing");
         }
     }
