@@ -4,20 +4,6 @@
     ViewData["Dormitory"] = "GetLeasings";
 }
 
-<p>
-    <a asp-page="/Leasing/GetLeasing">Get All Leasing</a>
-</p>
-
-<p>
-    <a asp-page="/Leasing/GetAllAvailableRooms">See all available rooms for leasing</a>
-</p>
-
-<form>
-    <p>
-
-    </p>
-</form>
-
 <h4 style="color:red"> List of Leasings</h4>
 <table class="table">
     <thead>
@@ -28,43 +14,29 @@
             <th> StudentNo</th>
             <th> RoomNo</th>
             <th> DormitoryNumber</th>
-            
+
         </tr>
     </thead>
     <tbody>
 
-        @*@if (Model.Leasing != null)
+        @foreach (var item in Model.Leasings)
         {
             <tr>
-                <td>  @Model.Leasing.LeasingNo </td>
-                <td> @Model.Leasing.DateFrom </td>
-                <td> @Model.Leasing.DateTo </td>
-                <td> @Model.Leasing.StudentNo </td>
-                <td> @Model.Leasing.RoomNo </td>
-                <td> @Model.Leasing.DormitoryNumber </td>
-                
+                <td>  @item.LeasingNo </td>
+                <td> @item.DateFrom </td>
+                <td> @item.DateTo </td>
+                <td> @item.StudentNo </td>
+                <td> @item.RoomNo </td>
+                <td> @item.DormitoryNumber </td>
+
+                <td>
+                    <p>
+                        <a asp-page="/Leasing/GetLeasing" asp-page-handler="LeasingByLeasingNo" asp-route-aid="@item.LeasingNo"> Delete Leasing  </a>
+                    </p>
+                </td>
+
             </tr>
         }
-
-
-        else if (Model.Leasing != null)*@
-
-            @foreach (var item in Model.Leasings)
-            {
-                <tr>
-                    <td>  @item.LeasingNo </td>
-                    <td> @item.DateFrom </td>
-                    <td> @item.DateTo </td>
-                    <td> @item.StudentNo </td>
-                    <td> @item.RoomNo </td>
-                    <td> @item.DormitoryNumber </td>
-                    
-                    <td>
-                        <p>
-                            <a asp-page="/Leasing/GetLeasing" asp-page-handler="LeasingByLeasingNo" asp-route-aid="@item.LeasingNo"> Leasing No  </a>
-                        </p>
-                    </td>
-                    
-                </tr>
-            }
 </table>
+
+<a asp-page="/Leasing/CreateLeasing" class="btn btn-primary btn-block">Create New Leasing</a>

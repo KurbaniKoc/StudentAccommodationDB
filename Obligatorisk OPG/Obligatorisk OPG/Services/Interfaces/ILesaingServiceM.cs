@@ -1,15 +1,19 @@
 ﻿using Obligatorisk_OPG.Model;
+using Obligatorisk_OPG.ViewModels;
 
 namespace Obligatorisk_OPG.Services.Interfaces
 {
-  
-        public interface ILeasingServiceM
-        {
-            IEnumerable<Leasing> GetAllLeasing();
-            IEnumerable<Leasing> GetAll();
-        //IEnumerable<Leasing> GetLeasings();
-            IEnumerable<Room> GetAllAvailableRooms();
-          
+    public interface ILeasingServiceM
+    {
+        IEnumerable<Leasing> GetAllLeasing();
+        IEnumerable<Leasing> GetAll();
+        void AddLeasing(Leasing leasing);
+        public IEnumerable<Leasing_Student> GetLeasingStudent(int id);
+
+
+
+
+
     }
-    
+
 }

@@ -470,24 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mahoe\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\madsg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mahoe\\Desktop\\Projekt Opgave\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
+      "projectUniqueName": "C:\\Users\\madsg\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
       "projectName": "Obligatorisk OPG",
-      "projectPath": "C:\\Users\\mahoe\\Desktop\\Projekt Opgave\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
-      "packagesPath": "C:\\Users\\mahoe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mahoe\\Desktop\\Projekt Opgave\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\obj\\",
+      "projectPath": "C:\\Users\\madsg\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
+      "packagesPath": "C:\\Users\\madsg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\madsg\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mahoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\madsg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -3,16 +3,23 @@ using System;
 using Obligatorisk_OPG.Model;
 using System.Numerics;
 using Obligatorisk_OPG.Services.Interfaces;
-using Obligatorisk_OPG.Services.TabelServices.RoomS;
+using Obligatorisk_OPG.ViewModels;
 
 namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
 {
     public class LeasingServiceM : ILeasingServiceM
     {
+        public void AddLeasing(Leasing leasing)
+        {
+            SQL_Leasing.AddLeasing(leasing );
+        }
+
         public IEnumerable<Leasing> GetAll()
         {
             return SQL_Leasing.GetAllLeasings();
         }
+
+
 
         public IEnumerable<Leasing> GetAllLeasing()
         {
@@ -24,11 +31,10 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
             return SQL_Leasing.GetAllLeasings();
         }
 
-        public IEnumerable<Room> GetAllAvailableRooms()
+        public IEnumerable<Leasing_Student> GetLeasingStudent(int id)
         {
-            return SQL_Leasing.GetAllAvailableRooms();
+            return SQL_Leasing.GetLeasingStudent(id);
+            
         }
-
-
     }
 }
