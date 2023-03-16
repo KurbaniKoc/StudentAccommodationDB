@@ -110,6 +110,11 @@
                         <a asp-page="/Dormitory/GetStudent_Room" asp-page-handler="GetStudent_Room" asp-route-did="@item.Dormitory_No"> Show Room With Students  </a>
                     </p>
                 </td>
+                <td>
+                    <p>
+                        <a asp-page="/Dormitory/GetLeasing_Room" asp-page-handler="GetLeasing_Room" asp-route-lid="@item.Dormitory_No"> Show Rooms With Leasing  </a>
+                    </p>
+                </td>
 
             </tr>
         }

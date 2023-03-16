@@ -1,7 +1,7 @@
 ﻿using Obligatorisk_OPG.Model;
 using Obligatorisk_OPG.ViewModels;
 using System.Data.SqlClient;
-
+using System.Reflection.Emit;
 
 namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
 {
@@ -113,6 +113,34 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
                 }
             }
             return ListLeasing_Student;
+        }
+
+        public static List<Leasing_Room> GetLeasingRoom(int lid)
+        {
+            List<Leasing_Room> ListLeasing_Room = new List<Leasing_Room>();
+            string query = "Select * from Leasing where Leasing.Student_No= @lid"; //Ændre
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@lid", lid);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Leasing_Room leasing_Room = new Leasing_Room();
+                            leasing_Room.LeasingNo = Convert.ToInt32(reader[0]);
+                            leasing_Room.StudentNo = Convert.ToInt32(reader[3]);
+                            leasing_Room.RoomNo = Convert.ToInt32(reader[4]);
+                            
+
+                            ListLeasing_Room.Add(leasing_Room);
+                        }
+                    }
+                }
+            }
+            return ListLeasing_Room;
         }
     }
 }

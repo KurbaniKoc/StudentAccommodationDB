@@ -1,0 +1,27 @@
+﻿@page
+@model Obligatorisk_OPG.Pages.Dormitory.GetLeasing_RoomModel
+@{
+}
+<h4 style="color:red"> List of Rooms in Dormitory </h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th> RoomNo </th>
+            <th> StudentNo </th>
+            <th> LeasingNo </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.leasing_Room != null)
+
+            @foreach (var item in Model.leasing_Room)
+            {
+                <tr>
+                    <td> @item.LeasingNo</td>
+                    <td> @item.StudentNo</td>
+                    <td> @item.RoomNo</td>
+                    
+                </tr>
+            }
+</table>
