@@ -31,16 +31,16 @@ namespace Obligatorisk_OPG.Services.TabelServices.RoomS
             return roomList;
         }
 
-        public static List<Room_Dormitory> GetRoomDormitory(int id)
+        public static List<Room_Dormitory> GetRoomDormitory(int rid)
         {
             List<Room_Dormitory> ListRoom_Dormitory = new List<Room_Dormitory>();
-            string query = "Select * from Room where Room.Dormitory_No = @id";
+            string query = "Select * from Room where Room.Dormitory_No = @rid";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@rid", rid);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())

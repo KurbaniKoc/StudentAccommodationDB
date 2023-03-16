@@ -17,9 +17,9 @@ namespace Obligatorisk_OPG.Pages.Room
             roomService = service;
         }
 
-        public void OnGet(int rid) 
+        public void OnGet(int aid) 
         {
-            room_Dormitory = roomService.GetRoom_Dormitory(rid);
+            room_Dormitory = roomService.GetRoom_Dormitory(aid);
         }
 
         
