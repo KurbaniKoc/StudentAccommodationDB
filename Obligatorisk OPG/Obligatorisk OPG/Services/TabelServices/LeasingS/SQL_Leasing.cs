@@ -19,7 +19,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
         //            command.Parameters.AddWithValue("@Date_From", leasing.DateFrom);
         //            command.Parameters.AddWithValue("@Date_To", leasing.DateTo);
         //            command.Parameters.AddWithValue("@Student_No", leasing)
-                    
+
         //            int affectedRows = command.ExecuteNonQuery();
         //        }
         //    }
@@ -65,7 +65,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
                         Room room = new Room();
                         room.RoomNo = Convert.ToInt32(reader[0]);
                         room.Types = Convert.ToString(reader[1]);
-                        room.Price = Convert.ToInt32(reader[2]);                      
+                        room.Price = Convert.ToInt32(reader[2]);
                         roomList.Add(room);
                     }
                 }
@@ -106,9 +106,9 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
                         leasing.LeasingNo = Convert.ToInt32(reader[0]);
                         leasing.DateFrom = Convert.ToDateTime(reader[1]);
                         leasing.DateTo = Convert.ToDateTime(reader[2]);
-                        leasing.StudentNo= Convert.ToInt32(reader[3]);
-                        leasing.RoomNo= Convert.ToInt32(reader[4]);
-                        leasing.DormitoryNumber= Convert.ToInt32(reader[5]);
+                        leasing.StudentNo = Convert.ToInt32(reader[3]);
+                        leasing.RoomNo = Convert.ToInt32(reader[4]);
+                        leasing.DormitoryNumber = Convert.ToInt32(reader[5]);
 
                         listLeasing.Add(leasing);
                     }
@@ -117,58 +117,76 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
             }
         }
 
-        //public static List<Actor_Movies> GetAllActorsAndTheirMovies()
-        //{
-        //    // prepare a list
-        //    List<Actor_Movies> listActor_Movies = new List<Actor_Movies>();
 
-        //    // define the sql query
-        //    string query = "SELECT Actor.name, Actor.country, Movie.title, Movie.Year  from Movie, Actor WHERE Movie.actorid = Actor.Id";
+        public static Room GetRoomByNumber(int roomNo)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = $"SELECT * FROM Room WHERE Room_No = {roomNo}";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Room room = new Room();
+                            room.RoomNo = Convert.ToInt32(reader[0]);
+                            room.Types = Convert.ToString(reader[1]);
+                            room.Price = Convert.ToInt32(reader[2]);
+                            return room;
+                        }
+                        else
+                        {
+                            return null; // Room not found
+                        }
+                    }
+                }
+            }
+        }
 
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        SqlCommand command = new SqlCommand(query, connection);
-        //        using (SqlDataReader reader = command.ExecuteReader())
-        //        {
 
-        //            while (reader.Read())
-        //            {
-        //                Actor_Movies actor_movie = new Actor_Movies();
-        //                actor_movie.Name = Convert.ToString(reader[0]);
-        //                actor_movie.Country = Convert.ToString(reader[1]);
-        //                actor_movie.Title = Convert.ToString(reader[2]);
-        //                actor_movie.Year = Convert.ToInt32(reader[3]);
+            //public static void UpdateLeasing(Leasing leasing)
+            //{
+            //    string query = $"UPDATE Leasing SET DateFrom=@Date_From, DateTo=@Date_to, StudentNo=@Student_No, RoomNo=@Room_No, DormitoryNumber=@Dormitory_Number WHERE LeasingNo=@Leasing_No";
+            //    using (SqlConnection connection = new SqlConnection(connectionString))
+            //    {
+            //        connection.Open();
+            //        using (SqlCommand command = new SqlCommand(query, connection))
+            //        {
+            //            command.Parameters.AddWithValue("@Date_From", leasing.DateFrom);
+            //            command.Parameters.AddWithValue("@Date_To", leasing.DateTo);
+            //            command.Parameters.AddWithValue("@Student_No", leasing.StudentNo);
+            //            command.Parameters.AddWithValue("@Room_No", leasing.RoomNo);
+            //            command.Parameters.AddWithValue("@Dormitory_Number", leasing.DormitoryNumber);
+            //            command.Parameters.AddWithValue("@Leasing_No", leasing.LeasingNo);
 
-        //                listActor_Movies.Add(actor_movie);
-        //            }
-        //            return listActor_Movies;
-        //        }
-        //    }
-        //}
+            //            int affectedRows = command.ExecuteNonQuery();
+            //        }
+            //    }
+            //}
 
-        //public static Actor GetActorById(int actorId)
-        //{
-        //    string query = $"SELECT * From Actor where Id=@aid";
-        //    Actor actor = new Actor();
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        SqlCommand command = new SqlCommand(query, connection);
-        //        command.Parameters.AddWithValue("@aid", actorId);
-        //        using (SqlDataReader reader = command.ExecuteReader())
-        //        {
-        //            while (reader.Read()) // while I am reading row by row
-        //            {
-        //                actor.Id = Convert.ToInt32(reader["Id"]);
-        //                actor.Name = Convert.ToString(reader["Name"]);
-        //                actor.Country = Convert.ToString(reader["Country"]);
-        //                actor.Birth_year = Convert.ToDateTime(reader["Birth_year"]);
-        //                actor.Alive = Convert.ToBoolean(reader["Alive"]);
-        //            }
-        //        }
-        //    }
-        //    return actor;
-        //}
+            //public static void UpdateRoom(Room room)
+            //{
+            //    string query = $"UPDATE Room SET Types=@Types, Price=@Price WHERE Room_No=@Room_No";
+            //    using (SqlConnection connection = new SqlConnection(connectionString))
+            //    {
+            //        connection.Open();
+            //        using (SqlCommand command = new SqlCommand(query, connection))
+            //        {
+            //            command.Parameters.AddWithValue("@Types", room.Types);
+            //            command.Parameters.AddWithValue("@Price", room.Price);
+            //            command.Parameters.AddWithValue("@Room_No", room.RoomNo);
+
+            //            int affectedRows = command.ExecuteNonQuery();
+            //        }
+            //    }
+            //}
+
+
+
+        }
     }
-}
+
+
+

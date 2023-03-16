@@ -1,0 +1,30 @@
+﻿@page
+@model Obligatorisk_OPG.GetAllAvailableRoomsModel
+@{
+}
+
+
+<h4 style="color:red"> List of all available Rooms</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Room Number </th>
+            <th> Type </th>
+            <th> Price </th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Rooms)
+        {
+            <tr>
+                <td>  @item.RoomNo </td>
+                <td> @item.Types </td>
+                <td> @item.Price </td>
+                <td>
+                    <a class="btn btn-primary" href="/Leasing/CreateLeasing?roomNo=@item.RoomNo">Lease</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

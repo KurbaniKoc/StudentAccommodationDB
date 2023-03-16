@@ -3,6 +3,7 @@ using System;
 using Obligatorisk_OPG.Model;
 using System.Numerics;
 using Obligatorisk_OPG.Services.Interfaces;
+using Obligatorisk_OPG.Services.TabelServices.RoomS;
 
 namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
 {
@@ -22,5 +23,12 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
         {
             return SQL_Leasing.GetAllLeasings();
         }
+
+        public IEnumerable<Room> GetAllAvailableRooms()
+        {
+            return SQL_Leasing.GetAllAvailableRooms();
+        }
+
+
     }
 }

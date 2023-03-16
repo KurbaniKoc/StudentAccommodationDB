@@ -25,6 +25,7 @@ namespace Obligatorisk_OPG
             services.AddTransient<IRoomService, RoomService>();
             services.AddTransient<IStudentService, ADOStudentService>();
             services.AddTransient<ILeasingServiceM, LeasingServiceM>();
+            
 
         }
 

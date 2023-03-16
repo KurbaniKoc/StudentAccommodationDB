@@ -7,7 +7,9 @@ namespace Obligatorisk_OPG.Services.Interfaces
         {
             IEnumerable<Leasing> GetAllLeasing();
             IEnumerable<Leasing> GetAll();
-            //IEnumerable<Leasing> GetLeasings();
-        }
+        //IEnumerable<Leasing> GetLeasings();
+            IEnumerable<Room> GetAllAvailableRooms();
+          
+    }
     
 }
