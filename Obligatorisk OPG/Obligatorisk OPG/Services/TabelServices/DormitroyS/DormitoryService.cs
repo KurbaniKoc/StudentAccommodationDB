@@ -1,5 +1,6 @@
 ﻿using Obligatorisk_OPG.Model;
 using Obligatorisk_OPG.Services.Interfaces;
+using Obligatorisk_OPG.ViewModels;
 
 namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
 {
@@ -11,5 +12,10 @@ namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
             return SQL_Dormitory.GetAllDormitories();
         }
 
+        public IEnumerable<Room_Student> GetRoomStudent(int did)
+        {
+            return SQL_Dormitory.GetRoomsAndStudents(did);
+            
+        }
     }
 }

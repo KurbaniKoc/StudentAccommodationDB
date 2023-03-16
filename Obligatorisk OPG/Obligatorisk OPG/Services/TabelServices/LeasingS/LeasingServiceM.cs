@@ -36,5 +36,10 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
             return SQL_Leasing.GetLeasingStudent(id);
             
         }
+
+        public IEnumerable<Leasing_Room> GetLeasingRoom(int lid)
+        {
+            return SQL_Leasing.GetLeasingRoom(lid);
+        }
     }
 }

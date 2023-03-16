@@ -1,0 +1,31 @@
+﻿@page
+@model Obligatorisk_OPG.Pages.Dormitory.GetStudent_RoomModel
+@{
+}
+<h4 style="color:"> List of Students in Rooms </h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Room No </th>
+            <th> Dormitory Number </th>
+            <th> Student No </th>
+            <th> Student Name </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Room_Student != null)
+
+            @foreach (var item in Model.Room_Student)
+            {
+                <tr>
+                    <td> @item.RoomNo</td>
+                    
+                    <td> @item.DormitoryNo</td>
+                    <td> @item.StudentNo </td>
+                    <td> @item.StudentName </td>
+                    
+                </tr>
+            }
+</table>

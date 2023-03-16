@@ -8,9 +8,6 @@ namespace Obligatorisk_OPG.Pages.Room
     public class GetRoom_DormitoryModel : PageModel
     {
 
-
-
-
         public IEnumerable<Room_Dormitory> room_Dormitory { get; set; }
 
         IRoomService roomService { get; set; }
@@ -20,9 +17,9 @@ namespace Obligatorisk_OPG.Pages.Room
             roomService = service;
         }
 
-        public void OnGet(int aid) 
+        public void OnGet(int rid) 
         {
-            room_Dormitory = roomService.GetRoom_Dormitory(aid);
+            room_Dormitory = roomService.GetRoom_Dormitory(rid);
         }
 
         
