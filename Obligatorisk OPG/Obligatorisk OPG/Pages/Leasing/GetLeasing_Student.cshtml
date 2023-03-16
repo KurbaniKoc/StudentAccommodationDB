@@ -1,33 +1,53 @@
 ﻿@page
 @model Obligatorisk_OPG.Pages.Leasing.GetLeasing_StudentModel
 @{
+    ViewData["Dormitory"] = "GetLeasings";
 }
-<h4 style="color:red"> List of Leasing in Student </h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th> LeasingNo </th>
-            <th> DateFrom </th>
-            <th> DateTo </th>
-            <th> StudentNo </th>
-            <th> RoomNo </th>
-            <th> DormitoryNumber </th>
-        </tr>
-    </thead>
-    <tbody>
 
-        @if (Model.Leasing_student != null)
+<style>
+    body {
+        background-color: #1A1A1A;
+    }
 
-            @foreach (var item in Model.Leasing_student)
-            {
-                <tr>
-                    <td> @item.LeasingNo</td>
-                    <td> @item.DateFrom</td>
-                    <td>  @item.DateTo </td>
-                    <td> @item.StudentNo</td>
-                    <td> @item.RoomNo</td>
-                    <td> @item.DormitoryNumber</td>
+    h2 {
+        color: #FFFFFF;
+    }
+</style>
 
-                </tr>
-            }
-</table>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mb-4">List of Leasings in Student</h2>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Leasing Number</th>
+                            <th>Date From</th>
+                            <th>Date To</th>
+                            <th>Student Number</th>
+                            <th>Room Number</th>
+                            <th>Dormitory Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Leasing_student != null)
+                        {
+                            @foreach (var item in Model.Leasing_student)
+                            {
+                                <tr>
+                                    <td>@item.LeasingNo</td>
+                                    <td>@item.DateFrom</td>
+                                    <td>@item.DateTo</td>
+                                    <td>@item.StudentNo</td>
+                                    <td>@item.RoomNo</td>
+                                    <td>@item.DormitoryNumber</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

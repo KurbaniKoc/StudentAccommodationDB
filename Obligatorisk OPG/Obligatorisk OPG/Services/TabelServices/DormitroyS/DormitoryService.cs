@@ -11,5 +11,10 @@ namespace Obligatorisk_OPG.Services.TabelServices.DormitroyS
             return SQL_Dormitory.GetAllDormitories();
         }
 
+        public int GetDormitoryNoByRoomNo(int roomNo)
+        {
+            return SQL_Dormitory.GetDormitoryNoByRoomNo(roomNo);
+        }
+
     }
 }

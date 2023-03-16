@@ -7,7 +7,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
 {
     public class SQL_Leasing
     {
-        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = StudentAccommodationDB;";
+        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StudentAccommodation;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public static void AddLeasing(Leasing leasing)
         {
             string query = $"INSERT into Leasing(Leasing_No, Date_From, Date_To, Student_No, Room_No, Dormitory_Number) Values(@Leasing_No, @Date_From, @Date_To, @Student_No, @Room_No, @Dormitory_Number)";
@@ -113,6 +113,43 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
                 }
             }
             return ListLeasing_Student;
+        }
+
+        public static List<Room> GetAllAvailableRooms()
+        {
+            List<Room> roomList = new List<Room>();
+            string query = "SELECT Room.Room_No, Room.Types, Room.Price FROM Leasing RIGHT JOIN Room \r\nON Leasing.Room_No = Room.Room_No WHERE Leasing.Room_No IS NULL;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Room room = new Room();
+                        room.RoomNo = Convert.ToInt32(reader[0]);
+                        room.Types = Convert.ToString(reader[1]);
+                        room.Price = Convert.ToString(reader[2]);
+                        roomList.Add(room);
+                    }
+                }
+            }
+            return roomList;
+        }
+
+        public static bool LeasingExists(int leasingNo)
+        {
+            string query = $"SELECT COUNT(*) FROM Leasing WHERE Leasing_No = {leasingNo}";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
         }
     }
 }

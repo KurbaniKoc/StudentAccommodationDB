@@ -4,15 +4,29 @@ using Obligatorisk_OPG.Model;
 using System.Numerics;
 using Obligatorisk_OPG.Services.Interfaces;
 using Obligatorisk_OPG.ViewModels;
+using System.Data.SqlClient;
 
 namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
 {
     public class LeasingServiceM : ILeasingServiceM
     {
+        //public void AddLeasing(Leasing leasing)
+        //{
+        //    SQL_Leasing.AddLeasing(leasing );
+        //}
+
         public void AddLeasing(Leasing leasing)
         {
-            SQL_Leasing.AddLeasing(leasing );
+            if (SQL_Leasing.LeasingExists(leasing.LeasingNo))
+            {
+                throw new ArgumentException("LeasingNo already exists");
+            }
+            else
+            {
+                SQL_Leasing.AddLeasing(leasing);
+            }
         }
+
 
         public IEnumerable<Leasing> GetAll()
         {
@@ -35,6 +49,11 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
         {
             return SQL_Leasing.GetLeasingStudent(id);
             
+        }
+
+        public IEnumerable<Room> GetAllAvailableRooms()
+        {
+            return SQL_Leasing.GetAllAvailableRooms();
         }
     }
 }

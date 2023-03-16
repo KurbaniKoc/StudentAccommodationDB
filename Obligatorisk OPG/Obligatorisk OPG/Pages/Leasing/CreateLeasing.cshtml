@@ -34,12 +34,13 @@
 
             <div class="form-group">
                 <label asp-for="@Model.leasing.RoomNo" class="control-label"></label>
-                <input asp-for="@Model.leasing.RoomNo" class="form-control" />
+                <input asp-for="@Model.leasing.RoomNo" class="form-control" readonly />
                 <span asp-validation-for="@Model.leasing.RoomNo" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="@Model.leasing.DormitoryNumber" class="control-label"></label>
-                <input asp-for="@Model.leasing.DormitoryNumber" class="form-control" />
+                <input asp-for="@Model.leasing.DormitoryNumber" class="form-control" readonly />
                 <span asp-validation-for="@Model.leasing.DormitoryNumber" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\madsg\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj": {}
+    "C:\\Users\\mahoe\\OneDrive\\Dokumenter\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\madsg\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj": {
+    "C:\\Users\\mahoe\\OneDrive\\Dokumenter\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\madsg\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
+        "projectUniqueName": "C:\\Users\\mahoe\\OneDrive\\Dokumenter\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
         "projectName": "Obligatorisk OPG",
-        "projectPath": "C:\\Users\\madsg\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
-        "packagesPath": "C:\\Users\\madsg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\madsg\\Documents\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\obj\\",
+        "projectPath": "C:\\Users\\mahoe\\OneDrive\\Dokumenter\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
+        "packagesPath": "C:\\Users\\mahoe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mahoe\\OneDrive\\Dokumenter\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\madsg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

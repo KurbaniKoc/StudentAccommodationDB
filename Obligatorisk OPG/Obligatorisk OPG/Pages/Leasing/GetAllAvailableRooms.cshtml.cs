@@ -20,7 +20,6 @@ namespace Obligatorisk_OPG
         public void OnGet()
         {
             Rooms = roomService.GetAllAvailableRooms();
-
         }
 
         public void OnPost()

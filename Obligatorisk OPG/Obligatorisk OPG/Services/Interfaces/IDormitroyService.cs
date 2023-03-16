@@ -8,6 +8,8 @@ namespace Obligatorisk_OPG.Services.Interfaces
     {
         IEnumerable<Dormitory> GetDormitories();
 
+        public int GetDormitoryNoByRoomNo(int roomNo);
+
     }
 
 

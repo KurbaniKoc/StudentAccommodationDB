@@ -4,39 +4,56 @@
     ViewData["Dormitory"] = "GetLeasings";
 }
 
-<h4 style="color:red"> List of Leasings</h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th> LeasingNo </th>
-            <th> DateFrom  </th>
-            <th> DateTo  </th>
-            <th> StudentNo</th>
-            <th> RoomNo</th>
-            <th> DormitoryNumber</th>
+<style>
+    body {
+        background-color: #1A1A1A;
+    }
 
-        </tr>
-    </thead>
-    <tbody>
+    h2 {
+        color: #FFFFFF;
+    }
+</style>
 
-        @foreach (var item in Model.Leasings)
-        {
-            <tr>
-                <td>  @item.LeasingNo </td>
-                <td> @item.DateFrom </td>
-                <td> @item.DateTo </td>
-                <td> @item.StudentNo </td>
-                <td> @item.RoomNo </td>
-                <td> @item.DormitoryNumber </td>
-
-                <td>
-                    <p>
-                        <a asp-page="/Leasing/GetLeasing" asp-page-handler="LeasingByLeasingNo" asp-route-aid="@item.LeasingNo"> Delete Leasing  </a>
-                    </p>
-                </td>
-
-            </tr>
-        }
-</table>
-
-<a asp-page="/Leasing/CreateLeasing" class="btn btn-primary btn-block">Create New Leasing</a>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mb-4">List of Leasings</h2>
+            <p class="text-center">
+                <a asp-page="/Leasing/GetAllAvailableRooms" class="btn btn-outline-light">See all available rooms for leasing</a>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Leasing Number</th>
+                            <th>Date From</th>
+                            <th>Date To</th>
+                            <th>Student Number</th>
+                            <th>Room Number</th>
+                            <th>Dormitory Number</th>
+                            <th>Delete Leasing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Leasings)
+                        {
+                            <tr>
+                                <td>@item.LeasingNo</td>
+                                <td>@item.DateFrom</td>
+                                <td>@item.DateTo</td>
+                                <td>@item.StudentNo</td>
+                                <td>@item.RoomNo</td>
+                                <td>@item.DormitoryNumber</td>
+                                <td>
+                                    <p>
+                                        <a asp-page="/Leasing/GetLeasing" asp-page-handler="LeasingByLeasingNo" asp-route-aid="@item.LeasingNo" class="btn btn-danger btn-sm">Delete</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
