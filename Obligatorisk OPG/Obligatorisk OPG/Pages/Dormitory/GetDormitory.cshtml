@@ -1,47 +1,66 @@
 ﻿@page
 @model Obligatorisk_OPG.ViewDormitoryModel
 @{
+    ViewData["Title"] = "List of Dormitories";
 }
+<style>
+    body {
+        background-color: #1A1A1A;
+    }
 
+    h4 {
+        color: #FFFFFF;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 
-<h4 style="color:white"> List of Dormitories</h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th> Dormitory Number </th>
-            <th> Name  </th>
-            <th> Address  </th>
-        </tr>
-    </thead>
-    <tbody>
+    table {
+        color: #FFFFFF;
+    }
 
-        @*  @if (Model.Dormitory != null)
-        {
-        <tr>
-        <td>  @Model.Dormitory.Dormitory_No </td>
-        <td> @Model.Dormitory.Name </td>
-        <td> @Model.Dormitory.Address </td>
-        </tr>
-        }*@
+    a.btn {
+        color: #FFFFFF;
+        background-color: #DC3545;
+        border-color: #DC3545;
+    }
 
-
-        @* else if (Model.Dormitory != null)*@
-
-        @foreach (var item in Model.Dormitories)
-        {
-            <tr>
-                <td>  @item.Dormitory_No </td>
-                <td> @item.Name </td>
-                <td> @item.Address </td>
-
-                <td>
-                    <p>
-                        <a asp-page="/Room/GetRoom_Dormitory" asp-page-handler="GetRoom_Dormitory" asp-route-aid="@item.Dormitory_No"> Show Rooms in Dormitory  </a>
-                    </p>
-                </td>
-
-            </tr>
+        a.btn:hover {
+            color: #FFFFFF;
+            background-color: #C82333;
+            border-color: #BD2130;
         }
-
-
-</table>
+</style>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>List of Dormitories</h4>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Dormitory Number</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>View Rooms</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Dormitories)
+                        {
+                            <tr>
+                                <td>@item.Dormitory_No</td>
+                                <td>@item.Name</td>
+                                <td>@item.Address</td>
+                                <td>
+                                    <p>
+                                        <a asp-page="/Room/GetRoom_Dormitory" asp-page-handler="GetRoom_Dormitory" asp-route-aid="@item.Dormitory_No" class="btn btn-outline-danger btn-sm">View Rooms</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> 

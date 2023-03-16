@@ -23,7 +23,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.RoomS
                         room.RoomNo = Convert.ToInt32(reader[0]);
                         room.Types = Convert.ToString(reader[1]);
                         room.Price = Convert.ToString(reader[2]);
-                        room.DormitoryNo = Convert.ToInt32(reader[3]);
+                        room.DormitoryNo = Convert.ToInt32(reader["Dormitory_No"]);
                         roomList.Add(room);
                     }
                 }
