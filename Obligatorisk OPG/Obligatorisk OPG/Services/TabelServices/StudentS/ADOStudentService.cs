@@ -14,6 +14,11 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
             SQL_Student.AddStudent(student);
         }
 
+        public void DeleteStudent(Student student)
+        {
+            SQL_Student.DeleteStudent(student);
+        }
+
         public Student GetStudentById(int id)
         {
             return SQL_Student.GetStudentById(id);
@@ -29,6 +34,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
             return SQL_Student.GetAllStudentsByAdress(adress);
         }
 
+       
         //public IEnumerable<Student> GetStudents()
         //{
         //    return SQL_Student.GetAllStudents();

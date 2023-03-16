@@ -53,9 +53,14 @@
                 <td> @student.Address </td>
                 <td>
                     <p>
-                        <a asp-page="/Leasing/GetLeasing_Student" asp-page-handler="GetLeasing_Student" asp-route-aid="@student.Student_No"> Show Leasings for Student  </a>
+                        <a asp-page="/Leasing/GetLeasing_Student" asp-page-handler="GetLeasing_Student" asp-route-aid="@student.Student_No"> Show Leasings for Student </a>
                     </p>
                 </td>
+                    <td>
+                        <p>
+                        <a asp-page="/Student/DeleteStudent" asp-page-handler="DeleteStudent" asp-route-sid="@student.Student_No"> Delete Student </a>
+                        </p>
+                    </td>
 
             </tr>
         }
