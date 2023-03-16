@@ -8,9 +8,11 @@ namespace Obligatorisk_OPG.Services.Interfaces
         IEnumerable <Student> GetAllStudents();
         void AddStudent(Student student);
         IEnumerable<Student> GetStudentsByAdress(string adress);
-        public Student GetStudentById(int id);
+        public Student GetStudentById(int sid);
 
         IEnumerable<Student> GetAll();
+
+        public void DeleteStudent(Student student);
 
 
         //IEnumerable<Student> GetStudents();

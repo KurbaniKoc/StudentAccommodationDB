@@ -45,6 +45,21 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
             }
             return studentList;
         }
+
+        public static void DeleteStudent(Student student)
+        {
+            string query = $" DELETE from Student where Student_No=@student_No";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@student_No", student.Student_No);
+                    int affectedRows = command.ExecuteNonQuery();
+                }
+            }
+        }
+
         public static List<Student> GetAllStudentsByAdress(string adress)
         {
             // prepare a list
@@ -73,22 +88,22 @@ namespace Obligatorisk_OPG.Services.TabelServices.StudentS
             }
         }
 
-        public static Student GetStudentById(int studentId)
+        public static Student GetStudentById(int sid)
         {
-            string query = $"SELECT * From Student where Id=@aid";
+            string query = $"SELECT * From Student where Student_No=@sid";
             Student student = new Student();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@aid", studentId);
+                command.Parameters.AddWithValue("@sid", sid);
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read()) // while I am reading row by row
                     {
-                        student.Student_No = Convert.ToInt32(reader["Id"]);
+                        student.Student_No = Convert.ToInt32(reader["Student_No"]);
                         student.Name = Convert.ToString(reader["Name"]);
-                        student.Address = Convert.ToString(reader["Adress"]);
+                        student.Address = Convert.ToString(reader["Address"]);
                     }
                 }
             }
