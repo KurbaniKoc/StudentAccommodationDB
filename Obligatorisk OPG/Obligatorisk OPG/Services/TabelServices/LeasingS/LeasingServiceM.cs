@@ -11,7 +11,7 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
     {
         public void AddLeasing(Leasing leasing)
         {
-            SQL_Leasing.AddLeasing(leasing );
+            SQL_Leasing.AddLeasing(leasing);
         }
 
         public IEnumerable<Leasing> GetAll()
@@ -40,6 +40,11 @@ namespace Obligatorisk_OPG.Services.TabelServices.LeasingS
         public IEnumerable<Leasing_Room> GetLeasingRoom(int lid)
         {
             return SQL_Leasing.GetLeasingRoom(lid);
+        }
+
+        public IEnumerable<Room> GetAllAvailableRooms()
+        {
+            return SQL_Leasing.GetAllAvailableRooms();
         }
     }
 }

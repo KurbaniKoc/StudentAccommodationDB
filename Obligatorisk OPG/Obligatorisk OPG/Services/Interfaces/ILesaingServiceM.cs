@@ -10,8 +10,7 @@ namespace Obligatorisk_OPG.Services.Interfaces
         void AddLeasing(Leasing leasing);
         public IEnumerable<Leasing_Student> GetLeasingStudent(int id);
         public IEnumerable<Leasing_Room> GetLeasingRoom(int lid);
-
-
+        IEnumerable<Room> GetAllAvailableRooms();
 
 
 

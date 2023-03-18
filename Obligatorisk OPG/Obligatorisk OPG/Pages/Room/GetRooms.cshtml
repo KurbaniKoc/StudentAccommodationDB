@@ -1,7 +1,5 @@
 ﻿@page
 @model Obligatorisk_OPG.GetRoomsModel
-@{
-}
 
 <!DOCTYPE html>
 <html>
@@ -12,73 +10,64 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f5f5f5;
-            color: #333;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
-            line-height: 1.5;
-        }
-
-        h4 {
-            color: #333;
-            font-weight: bold;
-            font-size: 24px;
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
         }
 
         table {
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
             width: 100%;
-            margin-top: 20px;
+            margin-bottom: 1rem;
+            background-color: #444;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 10px 0;
         }
 
-        th, td {
+        th,
+        td {
+            padding: 0.75rem;
             text-align: left;
-            padding: 8px;
+            vertical-align: top;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         th {
-            background-color: #333;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            text-transform: uppercase;
+            background-color: #555;
+            font-weight: 600;
         }
 
         tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: #555;
         }
 
-        tr:hover {
-            background-color: #ddd;
-        }
-
-        .button {
+        a.button {
             display: inline-block;
-            background-color: #333;
-            color: #fff;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 12px 24px;
-            margin-top: 40px;
-            border-radius: 5px;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #000;
             text-decoration: none;
-            transition: background-color 0.3s;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            margin-right: 10px;
         }
 
-            .button:hover {
-                background-color: #444;
-            }
+        a.button:hover {
+            background-color: #FFA500;
+            color: #000;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
-    <h4>List of Rooms</h4>
+    <h1>List of Rooms</h1>
     <table>
         <thead>
             <tr>
@@ -86,6 +75,7 @@
                 <th>Type</th>
                 <th>Price</th>
                 <th>Dormitory Number</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -96,12 +86,13 @@
                     <td>@item.Types</td>
                     <td>@item.Price</td>
                     <td>@item.DormitoryNo</td>
+                    
                 </tr>
             }
         </tbody>
     </table>
     <div style="text-align:center">
-        <a href="#" class="button">Book a Room</a>
+        <a href="/Leasing/GetAllAvailableRooms" class="button">See all available rooms for leasing</a>
     </div>
 </body>
-</html> 
+</html>

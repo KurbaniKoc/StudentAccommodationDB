@@ -8,29 +8,35 @@ namespace Obligatorisk_OPG
 {
     public class CreateLeasingModel : PageModel
     {
+        private readonly ILeasingServiceM _leasingServiceM;
+        private readonly IDormitoryService _dormitoryService;
+
         [BindProperty]
-       
-        public Leasing leasing { get; set; } = new Leasing ();
-        public void OnGet(int leasingNo)
+        public Leasing leasing { get; set; } = new Leasing();
+
+        public CreateLeasingModel(ILeasingServiceM leasingServiceM, IDormitoryService dormitoryService)
         {
-            leasing.LeasingNo = leasingNo;
+            _leasingServiceM = leasingServiceM;
+            _dormitoryService = dormitoryService;
         }
-        ILeasingServiceM leasingServiceM;
-        
-        public CreateLeasingModel(ILeasingServiceM Service)
+
+        public void OnGet(int roomNo)
         {
-            this.leasingServiceM = Service;
+            leasing.RoomNo = roomNo;
+            leasing.DormitoryNumber = _dormitoryService.GetDormitoryNoByRoomNo(roomNo);
         }
-        
-        public IActionResult OnPost(Leasing leasing)
+
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-            leasingServiceM.AddLeasing(leasing);
-            //Create a method called changeRoomStatus som tager leasing som argument SetRoomOccapied = true
+
+            _leasingServiceM.AddLeasing(leasing);
+
             return RedirectToPage("GetLeasing");
         }
     }
+
 }
