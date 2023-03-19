@@ -470,24 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mahoe\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mahoe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mahoe\\Desktop\\Projekt Opgave\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
+      "projectUniqueName": "C:\\Users\\mahoe\\OneDrive\\Dokumenter\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
       "projectName": "Obligatorisk OPG",
-      "projectPath": "C:\\Users\\mahoe\\Desktop\\Projekt Opgave\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
+      "projectPath": "C:\\Users\\mahoe\\OneDrive\\Dokumenter\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\Obligatorisk OPG.csproj",
       "packagesPath": "C:\\Users\\mahoe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mahoe\\Desktop\\Projekt Opgave\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\obj\\",
+      "outputPath": "C:\\Users\\mahoe\\OneDrive\\Dokumenter\\GitHub\\StudentAccommodationDB\\Obligatorisk OPG\\Obligatorisk OPG\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\mahoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -537,7 +532,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
