@@ -4,7 +4,64 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .card-img-top-custom {
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
+
+
+<div class="container-fluid">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to our Dorm Management System</h1>
+        <p class="lead">Here you can manage and see dorms, students, rooms and leasings</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img class="card-img-top card-img-top-custom" src="https://images.unsplash.com/photo-1596276020587-8044fe049813?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1239&q=80" alt="Dorms">         
+                <div class="card-body">
+                    <h5 class="card-title">Dorms</h5>
+                    <p class="card-text">View and manage your dorms</p>
+                    <a href="/Dormitory/GetDormitory" class="btn btn-primary btn-warning">Go to Dorms</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img class="card-img-top card-img-top-custom" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Students">
+                <div class="card-body">
+                    <h5 class="card-title">Students</h5>
+                    <p class="card-text">View and manage your students</p>
+                    <a href="/Student/GetAllStudents" class="btn btn-primary btn-warning">Go to Students</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <img class="card-img-top card-img-top-custom" src="https://images.unsplash.com/photo-1555930112-0159bcdc3fe5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="Rooms">
+            <div class="card-body">
+                <h5 class="card-title">Rooms</h5>
+                <p class="card-text">View and manage your rooms</p>
+                <a href="/Room/GetRooms" class="btn btn-warning">Go to Rooms</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <img class="card-img-top card-img-top-custom" src="https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Leasings">
+            <div class="card-body">
+                <h5 class="card-title">Leasings</h5>
+                <p class="card-text">View and manage your leasings</p>
+                <a href="/leasing/GetLeasing" class="btn btn-warning">Go to Leasings</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
