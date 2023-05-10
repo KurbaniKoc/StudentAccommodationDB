@@ -1,112 +1,89 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Obligatorisk_OPG</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Obligatorisk_OPG.styles.css" asp-append-version="true" />
     <style>
         body {
-            background-color: #f5f5f5;
-            color: #333;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
+            background-color: #1A1A1A;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #FFFFFF;
         }
 
-        h4 {
-            color: #333;
-            font-weight: bold;
-            font-size: 24px;
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
+        .navbar {
+            background-color: #1E1E1E !important;
         }
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
+        .nav-link {
+            color: #FFFFFF !important;
         }
 
-        th, td {
-            text-align: left;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #333;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #ddd;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 12px 24px;
-            margin-top: 40px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        }
-
-            .button:hover {
-                background-color: #444;
+            .nav-link:hover {
+                color: #FFC107 !important;
             }
+
+        .table {
+            background-color: #1E1E1E !important;
+            color: #FFFFFF;
+        }
+
+            .table th {
+                color: #FFC107;
+                border: none !important;
+            }
+
+            .table td {
+                border-color: #FFC107 !important;
+            }
+
+        .btn-outline-light {
+            border-color: #FFFFFF !important;
+            color: #FFFFFF !important;
+        }
+
+            .btn-outline-light:hover {
+                background-color: #FFFFFF !important;
+                color: #1E1E1E !important;
+            }
+
+        .footer {
+            background-color: #1E1E1E !important;
+            color: #FFFFFF;
+        }
     </style>
+    <link rel="stylesheet" href="~/Obligatorisk_OPG.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Obligatorisk_OPG</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Dormitory/GetDormitory">Dormitories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Room/GetRooms">Rooms</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Leasing/GetLeasing">Leasings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Student/GetAllStudents">Students</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-white border-bottom box-shadow mb-3">
+            ...
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-black" asp-area="" asp-page="/Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" asp-area="" asp-page="/Privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" asp-area="" asp-page="/Dormitory/GetDormitory">Dormitories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" asp-area="" asp-page="/Room/GetRooms">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" asp-area="" asp-page="/Leasing/GetLeasing">Leasings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" asp-area="" asp-page="/Student/GetAllStudents">Students</a>
+                </li>
+            </ul>
         </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">

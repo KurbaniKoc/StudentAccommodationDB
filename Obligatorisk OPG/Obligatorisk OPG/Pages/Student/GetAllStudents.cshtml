@@ -1,133 +1,148 @@
 ﻿@page
 @model Obligatorisk_OPG.GetAllStudentsModel
 @{
-    ViewData["Title"] = "GetStudents";
+    ViewData["Title"] = "List of Students";
 }
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
 
-<h1>Students</h1>
+        .btn-primary {
+            outline none;
+            background-color: #FFD700;
+            color: #000;
+            border-radius: 4px;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
 
-<p>
-    <a asp-page="/Student/GetAllStudents">GetAllStudents New Student</a>
-</p>
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: #444;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 10px 0;
+        }
 
-<form>
-    <p>
-        Search By Adress: <input type="text" asp-for="AdressCriteria" />
-        <input type="submit" value="Filter" />
-        <a asp-page="/Student/GetAllStudents">Back to Full List </a>
-    </p>
-</form>
-<form>
-    <p>
-        Search By Id: <input type="text" asp-for="IdCriteria" />
-        <input type="submit" value="Filter" />
-        <a asp-page="/Student/GetAllStudents">Back to Full List </a>
-    </p>
-</form>
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            vertical-align: top;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-<h4 style="color:Gold"> List of students</h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Adress
-            </th>
-        </tr>
-        <style>
-            body {
-                background-color: #f5f5f5;
-                color: #333;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
-                font-size: 16px;
-                line-height: 1.5;
+        th {
+            background-color: #555;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #555;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #000;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+            a.button:hover {
+                background-color: #FFA500;
+                color: #000;
             }
 
-            h4 {
-                color: #333;
-                font-weight: bold;
-                font-size: 24px;
-                text-align: center;
-                margin-top: 40px;
-                margin-bottom: 20px;
-            }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
 
-            table {
-                border-collapse: collapse;
-                width: 100%;
-                margin-top: 20px;
-            }
+        form {
+            margin-bottom: 10px;
+        }
 
-            th, td {
-                text-align: left;
-                padding: 8px;
-            }
+        input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Students</h1>
 
-            th {
-                background-color: #333;
-                color: #fff;
-                font-weight: bold;
-                font-size: 18px;
-                text-transform: uppercase;
-            }
+    <form>
+        <p>
+            Search By Address: <input type="text" asp-for="AdressCriteria" />
+            <input type="submit" value="Filter" />
+            <a asp-page="/Student/GetAllStudents">Back to Full List</a>
+        </p>
+    </form>
 
-            tr:nth-child(even) {
-                background-color: #f9f9f9;
-            }
+    <form>
+        <p>
+            Search By ID: <input type="text" asp-for="IdCriteria" />
+            <input type="submit" value="Filter" />
+            <a asp-page="/Student/GetAllStudents">Back to Full List</a>
+        </p>
+    </form>
 
-            tr:hover {
-                background-color: #ddd;
-            }
-
-            .button {
-                display: inline-block;
-                background-color: #333;
-                color: #fff;
-                font-weight: bold;
-                font-size: 16px;
-                padding: 12px 24px;
-                margin-top: 40px;
-                border-radius: 5px;
-                text-decoration: none;
-                transition: background-color 0.3s;
-                cursor: pointer;
-                border: none;
-                outline: none;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-            }
-
-                .button:hover {
-                    background-color: #444;
-                }
-        </style>
-    </thead>
-    <tbody>
-
-
-
-        @foreach (var student in Model.Students)
-        {
+    <table>
+        <thead>
             <tr>
-                <td>  @student.Student_No </td>
-                <td> @student.Name </td>
-                <td> @student.Address </td>
-                <td>
-                    <p>
-                        <a asp-page="/Leasing/GetLeasing_Student" asp-page-handler="GetLeasing_Student" asp-route-aid="@student.Student_No"> Show Leasings for Student </a>
-                    </p>
-                </td>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model.Students)
+            {
+                <tr>
+                    <td>@student.Student_No</td>
+                    <td>@student.Name</td>
+                    <td>@student.Address</td>
                     <td>
                         <p>
-                        <a asp-page="/Student/DeleteStudent" asp-page-handler="DeleteStudent" asp-route-sid="@student.Student_No"> Delete Student </a>
+                            <a asp-page="/Leasing/GetLeasing_Student" asp-page-handler="GetLeasing_Student" asp-route-aid="@student.Student_No" class="button">Show Leasings for Student</a>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <a asp-page="/Student/DeleteStudent" asp-page-handler="DeleteStudent" asp-route-sid="@student.Student_No" class="button">Delete Student</a>
                         </p>
                     </td>
 
+
             </tr>
         }
+        </tbody>
+
+        
 </table>
+
+</body>
+
+</html>
+
